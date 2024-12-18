@@ -1,7 +1,7 @@
 # Site settings
 title: Mr. B. Tech Blog # site title
 description: >- # site description
-  Making the world better by talking aboit complex technical topic in simple words.
+  Making the world better by talking aboit complex technical topics in simple words.
 lang: en-US # default lang
 timezone: Asia/Jakarta # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
