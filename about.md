@@ -1,5 +1,5 @@
 ---
-title: Colophon
+title: About Mr. B.
 permalink: /about/
 layout: page
 excerpt: Hello peeps, I'm student of computer science from Banyuwangi, living in Jogjakarta. This blog for documentation about my programming journey, running on jekyll, hosting on netlify and using my own simple theme.
@@ -12,7 +12,13 @@ If you have a question about him or else, just send a letter to him.
 
 You can [report](http://github.com/piharpi/jekyll-klise/issues/new) if there is an broken link(s) or somethings else.
 
-**may u needs ✨**
+## Let's Keep in Touch
 
-- {{ site.author.email }}
-- github.com/{{ site.author.github }}
+- <a
+    href="https://github.com/{{ site.author.github }}"
+    target="_blank"
+    rel="noopener noreferrer">GitHub</a>
+- <a
+    href="https://www.linkedin.com/in/{{ site.author.linkedin }}/"
+    target="_blank"
+    rel="noopener noreferrer">LinkedIn</a>

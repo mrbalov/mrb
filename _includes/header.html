@@ -8,8 +8,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="#fff" />
   <meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
   <title>
-    {% if page.title %}{{ page.title | escape }} - {{ site.title }}{% else %}{{
-    site.title | escape }}{% endif %}
+    {% if page.title %}
+      {{ page.title | escape }} - {{ site.title }}{% else %}{{ site.title | escape }}
+    {% endif %}
   </title>
   <link
     rel="alternate"
@@ -24,6 +25,7 @@
       page.url  | remove: 'index.html' | remove: '.html' | absolute_url
     }}"
   />
+
   {% if paginator.previous_page %}
   <link
     rel="prev"
@@ -33,7 +35,9 @@
         | remove: '.html'
     }}"
   />
-  {% endif %} {% if paginator.next_page %}
+  {% endif %}
+  
+  {% if paginator.next_page %}
   <link
     rel="next"
     href="{{
@@ -43,6 +47,7 @@
     }}"
   />
   {% endif %}
+
   <meta
     name="description"
     content="{{
@@ -68,6 +73,7 @@
       site.author.name
     }}{% else %}{{ site.title | escape }}{% endif %}"
   />
+
   {% if page.location %}
   <meta property="og:type" content="article" />
   <meta
@@ -77,6 +83,7 @@
   {% else %}
   <meta property="og:type" content="website" />
   {% endif %}
+
   <meta
     property="og:url"
     content="{{
@@ -94,11 +101,13 @@
         | escape
     }}"
   />
+
   {% if page.image %}
   <meta property="og:image" content="{{ page.image | absolute_url }}" />
   {% else %}
-  <meta property="og:image" content="{{ site.image | absolute_url }}" />
+  <meta property="og:image" content="{{ site.og_image | absolute_url }}" />
   {% endif %}
+
   <meta property="og:image:width" content="640" />
   <meta property="og:image:height" content="640" />
   <meta name="twitter:card" content="summary" />
@@ -127,11 +136,15 @@
         | escape
     }}"
   />
+
   {% if page.image %}
   <meta name="twitter:image" content="{{ page.image | absolute_url }}" />
   {% else %}
-  <meta name="twitter:image" content="{{ site.image | absolute_url }}" />
-  {% endif %} {% feed_meta %}
+  <meta name="twitter:image" content="{{ site.og_image | absolute_url }}" />
+  {% endif %}
+
+  {% feed_meta %}
+
   <link
     rel="apple-touch-icon"
     sizes="180x180"
@@ -166,10 +179,14 @@
   {% if page.usemathjax %}
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
-      TeX: { equationNumbers: { autoNumber: "AMS" } }
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
       });
     </script>
-    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=TeX-AMS-MML_HTMLorMML"
+      async
+    >
+    </script>
   {% endif %}
-    
 </head>

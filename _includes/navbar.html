@@ -162,7 +162,7 @@
     <div class="trigger">
       <div class="trigger-container">
         {%- assign url = page.url -%}
-        {%- assign menus = site.data.menus -%}
+        {%- assign menus = site.data.header-menus -%}
         {%- if menus %}
           {%- for menu in menus -%} 
             {%- if url == menu.url -%}
