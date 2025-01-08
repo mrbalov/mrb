@@ -26,10 +26,10 @@ You may have already heard this rule. But have you ever wondered what it means a
 
 The following terminology is important for gaining the right understanding of the ideas presented in the article.
 
-- **Element.** It is a generic part of a system of any scale. A file, module, function, class, or anything else is a valid example of a system element. In the context of the article, you may imagine an element as an elementary thing like a *molecule*, as it is usually used as a reference to elementary parts of a system. See [[2]](#references) for more details.
-- **Module.** It is a group of more-or-less related elements encapsulated under a concise <abbr title="Application Programming Interface">API</abbr>. You can imagine a module as an *organ* built of molecules (elements). The same as an organ, a good module is responsible for doing one thing well. See [[1]](#references) and [[2]](#references) for more details.
+- **Element.** It is a generic part of a system of any scale. A file, module, function, class, or anything else is a valid example of a system element. In the context of the article, you may imagine an element as an elementary thing like a *molecule*, as it is usually used as a reference to elementary parts of a system. [<sup>2</sup>](#references)
+- **Module.** It is a group of more-or-less related elements encapsulated under a concise <abbr title="Application Programming Interface">API</abbr>. You can imagine a module as an *organ* built of molecules (elements). The same as an organ, a good module is responsible for doing one thing well. [<sup>1</sup>](#references) [<sup>2</sup>](#references)
 - **Component.** It is a runtime version of a system element.
-- **System.** A software system that is comprised of intercommunicating elements, the main goal of which is to deliver business value. Logically, you can imagine a system as a family of modules that make an *organism*. A usual organism is good at solving multiple tasks well, the same as good software systems do. See [[3]](#references) for more details.
+- **System.** A software system that is comprised of intercommunicating elements, the main goal of which is to deliver business value. Logically, you can imagine a system as a family of modules that make an *organism*. A usual organism is good at solving multiple tasks well, the same as good software systems do. [<sup>3</sup>](#references)
 - **Low coupling** is the same as **Loose coupling**.
 - **High cohesion** is the same as **Tight cohesion**.
 
@@ -37,11 +37,11 @@ The following terminology is important for gaining the right understanding of th
 
 When talking about modularization, we must always keep in mind the following foundational concepts:
 
-- **DDD** - Domain-Driven Design. This is the classical concept from which everything starts. [[9]](#references)
-- **SOA** — Service-Oriented Architecture. [[4]](#references)
-- **Microservice Architecture.** It always goes hand-in-hand with the modularization problem. There are many different techniques for identifying the right service boundaries, almost the same as arranging the proper system modularization. [[5]](#references) [[8]](#references)
-- **Micro Frontends.** It is similar to the Microservice Architecture, but for the frontend — when independent <abbr title="User Interface">UI</abbr> parts are gathered in a seamless application via some mediator. [[6]](#references)
-- **Atomic Design.** Usually, it is applied to frontend development. However, in my opinion, its concepts are handy for designing systems with proper modularization that enables flexibility and extensibility. [[7]](#references)
+- **DDD** - Domain-Driven Design. This is the classical concept from which everything starts. [<sup>9</sup>](#references)
+- **SOA** — Service-Oriented Architecture. [<sup>4</sup>](#references)
+- **Microservice Architecture.** It always goes hand-in-hand with the modularization problem. There are many different techniques for identifying the right service boundaries, almost the same as arranging the proper system modularization. [<sup>5</sup>](#references) [<sup>8</sup>](#references)
+- **Micro Frontends.** It is similar to the Microservice Architecture, but for the frontend — when independent <abbr title="User Interface">UI</abbr> parts are gathered in a seamless application via some mediator. [<sup>6</sup>](#references)
+- **Atomic Design.** Usually, it is applied to frontend development. However, in my opinion, its concepts are handy for designing systems with proper modularization that enables flexibility and extensibility. [<sup>7</sup>](#references)
 
 When talking in terms of the Atomic Design, we usually start describing things from atoms rather than molecules, as I did above. It is done intentionally for several reasons. Firstly, there is no plan to fully follow the Atomic Design describing the modularization problems — it sounds like a separate topic that is worth a separate investigation. Secondly, atoms may be too small elements that I would like to neglect elaborating on such high-level concepts as system modularization.
 
@@ -51,7 +51,7 @@ Code examples in this article are based on the most popular frontend library —
 
 ## Architectural Structures
 
-According to [[2]](#references), there are the following 3 kinds of architectural structures:
+There are the following 3 kinds of architectural structures: [<sup>2</sup>](#references)
 
 1. **Module Structures.** Show how system elements (modules) are arranged. E.g., a directories tree is the simplest module structure.
 2. **Component-and-Connector Structures.** Show how system components communicate with each other in the runtime. In terms of microservice architecture, a component is usually represented as a service.
@@ -281,7 +281,7 @@ God Module is often a natural result of non-mature teams or <abbr title="As Soon
 
 Such a situation happens when system modules are defined in a wrong way, and their <abbr title="Application Programming Interfaces">APIs</abbr> belong to different subjects. It may resemble the God Module but split into several sub-modules.
 
-The Wrong Boundaries case may often mean that a system modules don’t follow the <abbr title="Single-Responsibility Principle">SRP</abbr> (Single-Responsibility Principle) [[1]](#references). When the <abbr title="Single-Responsibility Principle">SRP</abbr> is in place, module boundaries are correct, and the module <abbr title="Application Programming Interface">API</abbr> is predictable and concise.
+The Wrong Boundaries case may often mean that a system modules don’t follow the <abbr title="Single-Responsibility Principle">SRP</abbr> (Single-Responsibility Principle). [<sup>1</sup>](#references) When the <abbr title="Single-Responsibility Principle">SRP</abbr> is in place, module boundaries are correct, and the module <abbr title="Application Programming Interface">API</abbr> is predictable and concise.
 
 <figure>
 <img src="./wrong-boundaries-tight-coupling-loose-cohesion.webp" alt="Pic. 6. Wrong Boundaries — Tight Coupling, Loose Cohesion.">
@@ -458,13 +458,13 @@ The following table summarizes different cases of coupling and cohesion.
 
 From the first glance, you may think that this article tries to convince you using the Microservice Architecture. Like, split your system in modules/services, host them independently and live a happy life. Microservice Architecture is a modern solution that has its pros and cons. However, splitting a system into modules doesn’t always means that you must implement the Microservice Architecture.
 
-If your intention to improve a monolith system, I would recommend you following the [[8]](#references) reference as a step-by-step tutorial for making monolith a better system. As an example, you may consider splitting a monolith into a moduled monolith, which aligns with all concepts described in this article.
+If your intention to improve a monolith system, I would recommend you following the Sam Newman's step-by-step tutorial for making monolith a better system. [<sup>8</sup>](#references) As an example, you may consider splitting a monolith into a modular monolith, which aligns with all concepts described in this article.
 
 ## What’s Next?
 
 My strong recommendation is to proceed with deep investigation of foundational terms that you can find at the start of the article. If you want to improve a system you are responsible for, you need to rely only on trustworthy resources like books and official guides.
 
-If you don’t know what kind your system of, you may want to start from the introspection. This means you need to understand how the given system operates and document it properly according to the <abbr title="Software Engineering Institute">SEI recommendations [[2]](#references). It will be impossible to guess about a system without appropriate views.
+If you don’t know what kind your system of, you may want to start from the introspection. This means you need to understand how the given system operates and document it properly according to the <abbr title="Software Engineering Institute">SEI recommendations. [<sup>2</sup>](#references) It will be impossible to guess about a system without appropriate views.
 
 Try to concentrate not at code but at the product. Code makes the product but not backward. That is, try to design the architecture that fits requirements and avoid changes and synthetic improvements just for fun.
 
@@ -481,3 +481,16 @@ Architecture as a whole is more important than coupling and cohesion themselves.
 7. <a href="https://atomicdesign.bradfrost.com" rel="noopener noreferrer" target="_blank">Atomic Design - Open Source Book</a>
 8. <a href="https://www.amazon.com/Monolith-Microservices-Evolutionary-Patterns-Transform/dp/1492047848" rel="noopener noreferrer" target="_blank">Monolith to Microservices: Evolutionary Patterns to Transform Your Monolith - Book on Amazon</a>
 9. <a href="https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215" rel="noopener noreferrer" target="_blank">Domain-Driven Design: Tackling Complexity in the Heart of Software - Book on Amazon</a>
+10.  <a href="https://www.researchgate.net/publication/221331713_Information_Distribution_Aspects_of_Design_Methodology" rel="noopener noreferrer" target="_blank">Information Distribution Aspects of Design Methodology - Classical Article by David Parnas</a>
+11.  <a href="https://dl.acm.org/doi/10.1145/361598.361623" rel="noopener noreferrer" target="_blank">On the Criteria to be Used in Decomposing Systems into Modules - Classical Paper by David Parnas</a>
+12.  <a href="https://dl.acm.org/doi/abs/10.5555/944331.944357" rel="noopener noreferrer" target="_blank">The Secret History on Information Hiding - Classical Paper by David Parnas</a>
+13.  <a href="https://youtu.be/5OjqD-ow8GE?si=zYUHC2kqpgd0jfi8" rel="noopener noreferrer" target="_blank">Talk by Simon Brown about Modular Monoliths</a>
+14.  <a href="https://shopify.engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity" rel="noopener noreferrer" target="_blank">Deconstructing the Monolith: Designing Software that Maximizes Developer Productivity - Article by Kirsten Westeinde from Shopify</a>
+15.  <a href="https://youtu.be/gyZDWsLk_Ac" rel="noopener noreferrer" target="_blank">Deconstructing the Monolith - Kirsten Westeinde, Shopify | Craft Conference 2022 - YouTube Video</a>
+16.  <a href="https://martinfowler.com/bliki/DesignStaminaHypothesis.html" rel="noopener noreferrer" target="_blank">Design Stamina Hypothesis - Article by Martin Fowler</a>
+17.  <a href="https://martinfowler.com/articles/microservices.html" rel="noopener noreferrer" target="_blank">Microservices - Article by Martin Fowler and Co</a>
+18.  <a href="https://martinfowler.com/bliki/MonolithFirst.html" rel="noopener noreferrer" target="_blank">Monolith First - Article by Martin Fowler</a>
+19.  <a href="https://martinfowler.com/bliki/MicroservicePremium.html" rel="noopener noreferrer" target="_blank">Microservice Premium - Article by Martin Fowler</a>
+20.  <a href="https://martinfowler.com/bliki/BoundedContext.html" rel="noopener noreferrer" target="_blank">Bounded Context - Article by Martin Fowler</a>
+21.  <a href="https://martinfowler.com/bliki/SacrificialArchitecture.html" rel="noopener noreferrer" target="_blank">Sacrificial Architecture - Article by Martin Fowler</a>
+22.  <a href="https://martinfowler.com/bliki/ConwaysLaw.html" rel="noopener noreferrer" target="_blank">Conway’s Law - Article by Martin Fowler</a>

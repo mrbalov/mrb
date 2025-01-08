@@ -15,6 +15,11 @@ Thanks to my grandpa, I started my engineering journey early. The environment in
 
 When my grandpa had gone, I was mentally lost for several years. When you are a child and you lose a close relative, you lose your pathway. Aeromodelism and an appropriate environment of young inventors helped me to recover.
 
+<figure>
+    <img src="/assets/img/f1b-free-flight.webp" alt="Mr. B. in 2011 with his F1B plane model." style="max-height: 80vh">
+    <figcaption>Me in 2011 with my F1B plane model...</figcaption>
+</figure>
+
 Then, the computer appeared in my home. After some time, I have got a slow internet connection. It was a revolution for my brain. I remember that first search request — it was about plane model sketches. I was rapidly involved in a computer community that was mainly comprised of nerdy teenagers: instead of playing football, we were playing computer games and dreaming about being game developers one day in our adult lives.
 
 To make my dreams a reality, I started experimenting with 3D modeling (I used 3D Max) and learning my first programming language — Delphi (as I understood later, It was a mistake, and I’d better choose C).
@@ -28,6 +33,11 @@ After the graduation in 2017, I’m working as a full-time software engineer. Si
 It was a long journey, that made me the person I’m now: father, engineer, athlete, and survivor…
 
 You are welcome to know my thoughts and ideas on technical problems I work on.
+
+<figure>
+    <img src="/assets/img/athlete.webp" alt="Mr. B. Athlete on MODR Trail Race. Photo by Volunteer Photographer." style="max-height: 80vh">
+    <figcaption>Me on MODR Trail Race 2024. Photo by Volunteer Photographer.</figcaption>
+</figure>
 
 ## Let's Keep in Touch
 
