@@ -88,12 +88,6 @@
       margin-right: 5px;
     }
 
-    &.rss {
-      position: relative;
-      bottom: -3px;
-      outline: none;
-    }
-
     @include media-query($on-mobile) {
       opacity: 0.8;
     }
@@ -209,7 +203,6 @@
 
   .author-bio {
     margin: 0 auto;
-    opacity: 0.9;
     max-width: 393px;
     line-height: 1.688;
   }
@@ -285,7 +278,6 @@
     text-decoration: none;
 
     &:not(:last-child) {
-      margin-right: 10px;
       &:hover {
         opacity: 1;
       }
@@ -297,7 +289,6 @@
     margin-top: 3px;
     display: block;
     color: $gray;
-    opacity: 0.8;
   }
 }
 
@@ -369,7 +360,7 @@
   }
 }
 
-.archive-tags {
+.post-tags {
   height: auto;
   .tag-item {
     padding: 1px 3px;

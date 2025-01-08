@@ -2,6 +2,10 @@
   url: /
   external: false
 
+- title: Blog
+  url: /blog/
+  external: false
+
 - title: About
   url: /about/
   external: false
