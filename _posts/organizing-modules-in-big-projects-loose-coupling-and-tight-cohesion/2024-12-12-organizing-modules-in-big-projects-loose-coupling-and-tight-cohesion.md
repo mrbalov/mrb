@@ -4,7 +4,7 @@ date: 2024-12-12 12:00:00 +02:00
 modified: 2024-12-12 12:00:00 +02:00
 tags: [architecture, modularization]
 description: Proper modularization is crucial, especially for big projects. This is the main thing that makes your project extensible. There are two important things that you should consider when making your system modular — coupling and cohesion.
-image: "./cover.jpg"
+image: /organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/cover.webp
 ---
 
 <figure>

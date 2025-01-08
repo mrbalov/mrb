@@ -113,9 +113,7 @@
   <meta name="twitter:card" content="summary" />
   <meta
     name="twitter:title"
-    content="{% if page.title %}{{ page.title | escape }} | {{
-      site.author.twitter
-    }}{% else %}{{ site.title | escape }}{% endif %}"
+    content="{% if page.title %}{{ page.title | escape }} | {{ site.author.x }}{% else %}{{ site.title | escape }}{% endif %}"
   />
   <meta
     name="twitter:url"
@@ -123,8 +121,8 @@
       page.url  | remove: 'index.html' | remove: '.html' | absolute_url
     }}"
   />
-  <meta name="twitter:site" content="@{{ site.author.twitter }}" />
-  <meta name="twitter:creator" content="@{{ site.author.twitter }}" />
+  <meta name="twitter:site" content="@{{ site.author.x }}" />
+  <meta name="twitter:creator" content="@{{ site.author.x }}" />
   <meta
     name="twitter:description"
     content="{{

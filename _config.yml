@@ -27,6 +27,7 @@ fb_appid:
 collections:
   posts:
     output: true
+    permalink: /blog/:title
 
 # Markdown settings
 markdown: kramdown
