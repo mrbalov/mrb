@@ -3,6 +3,7 @@ title: About Mr. B.
 permalink: /about/
 layout: page
 comments: false
+image: /assets/about/f1b-free-flight.webp
 ---
 
 I’m a software engineer who likes diving deep into technical topics and sharing his knowledge. Usually, I like talking about hands-on software architecture and system design. However, sometimes I can share my experience with practical things like front-end frameworks or development techniques.
