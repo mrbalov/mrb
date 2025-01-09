@@ -5,7 +5,7 @@ lang: en-US
 timezone: Europe/Kyiv
 og_image: assets/img/ogp-global.webp
 mode: dark
-url: https://mrbtech.netlify.app/
+url: https://mrbtech.netlify.app
 baseurl:
 permalink: /:title/
 google_analytics:
