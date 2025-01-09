@@ -5,6 +5,11 @@ lang: en-US
 timezone: Europe/Kyiv
 og_image: assets/img/ogp-global.webp
 mode: dark
+url: https://mrbtech.netlify.app/
+baseurl:
+permalink: /:title/
+google_analytics:
+fb_appid:
 
 author:
   name: Mr. B.
@@ -17,12 +22,6 @@ author:
   linkedin: bohdan-balov-🇺🇦-74418b94
   email: your-email@email.com
   avatar: /assets/img/avatar.webp
-
-url: "https://klise.now.sh"
-baseurl:
-permalink: /:title/
-google_analytics:
-fb_appid:
 
 collections:
   posts:

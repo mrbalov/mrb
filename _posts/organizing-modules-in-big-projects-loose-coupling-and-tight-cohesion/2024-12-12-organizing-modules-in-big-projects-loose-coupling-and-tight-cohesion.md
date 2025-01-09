@@ -9,7 +9,7 @@ image: /organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/cov
 
 <figure>
 <img src="./cover.webp" alt="Cover - Abstract Vision on Coupling and Cohesion by DALL-E AI.">
-<figcaption>Illustration by <a href="https://unsplash.com/photos/a-bird-is-sitting-in-the-tall-grass-NLkz1AtgX-w" rel="noopener noreferrer" target="_blank">DALL-E</a></figcaption>
+<figcaption>Illustration by <a href="https://openai.com/index/dall-e-3/" rel="noopener noreferrer" target="_blank">DALL-E</a></figcaption>
 </figure>
 
 ## Problem
