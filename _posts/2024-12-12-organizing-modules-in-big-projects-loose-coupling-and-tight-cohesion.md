@@ -12,13 +12,30 @@ image: /assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-
 <figcaption>Illustration by <a href="https://openai.com/index/dall-e-3/" rel="noopener noreferrer" target="_blank">DALL-E</a></figcaption>
 </figure>
 
+## Contents
+
+- Problem
+- Terminology
+- Context
+  - Foundational Concepts
+  - Architectural Structures
+- Coupling
+- Cohesion
+- Coupling and Cohesion Levels
+- Cohesion Types
+- Coupling Types
+- Side Notes
+  - Microservice Architecture vs Modules
+- What is Next?
+- References
+
 ## Problem
 
 How do you organize system modules? I hope you place elements related to each other together (module) and then set up connections between those groups of elements. Right?
 
 The principle described above allows you to design extensible applications. Formally, it sounds like the following:
 
-> *Organize system elements in a way that is decoupled and cohesive. I.e., prefer **loose coupling** and **tight cohesion**.*
+> Organize system elements in a way that is decoupled and cohesive. I.e., prefer **loose coupling** and **tight cohesion**.
 
 You may have already heard this rule. But have you ever wondered what it means and what real benefit it could provide? I suggest you dive deeper into these questions and gain a justification for following this precious rule.
 
@@ -35,6 +52,8 @@ The following terminology is important for gaining the right understanding of th
 
 ## Context
 
+### Foundational Concepts
+
 When talking about modularization, we must always keep in mind the following foundational concepts:
 
 - **DDD** - Domain-Driven Design. This is the classical concept from which everything starts. [<sup>9</sup>](#references)
@@ -49,7 +68,7 @@ Understanding these foundational concepts makes it easy to accept the importance
 
 Code examples in this article are based on the most popular frontend library — React. However, you can replace it with any other code, as only general concepts make sense. I.e., the proper modularization is equally important for frontend, backend, and any other kind of systems.
 
-## Architectural Structures
+### Architectural Structures
 
 There are the following 3 kinds of architectural structures: [<sup>2</sup>](#references)
 
@@ -78,6 +97,10 @@ Let’s imagine that we’ve calculated a number of connections some way and it�
 
 Then, how to improve a system? Probably, the only adequate way is to follow the techniques we are gonna discuss below.
 
+There is a simple and useful definition of coupling suggested by Sam Newman: [<sup>8</sup>](#references)
+
+> Things are coupled when they change together.
+
 ## Cohesion
 
 Cohesion is when elements of a system are grouped together by some criteria. Loose cohesion means that a system’s elements don’t have clear boundaries. From the first glance, such a system may look like a mess.
@@ -103,7 +126,42 @@ As you can see, “coupling” and “cohesion” always go together.
 
 Supporting the tight cohesion is the best option for decreasing the number of connections and making a system more manageable and extensible.
 
-## Coupling & Cohesion
+There is a simple and useful definition of cohesion suggested by Sam Newman: [<sup>8</sup>](#references)
+
+> Things that change together, stay together.
+
+## Coupling and Cohesion Levels
+
+There are the following levels of coupling and cohesion:
+
+- **Code Level.** This is how the code is arranged. Usually, when investigating the code level, we talk about modules. To understand whether the modules are arranged correctly, the Module Views comes in handy.
+- **Runtime Level.** This is how runtime components are arranged. Usually, to look at the runtime level, we use the Component-and-Connector views, which allow us to understand how system components intercommunicate with each other.
+- **Business Level.** This level is about business domains. For instance, if the company has the Printing and Delivery departments, they are considered separate business domains. This concept is close to runtime components, but more about groups of people and how they intercommunicate with each other. See Conway's Law [<sup>22</sup>](#references) for more details.
+
+This means that understanding coupling and cohesion is crucial at different levels — starting from the code and finishing with how people communicate with each other.
+
+At every level, the rule is the same — aim to have as few connections as possible. This rule looks obvious when you imagine a big group of people that build a spaceship — the more you chat with everyone about everything, the longer you do your task.
+
+## Cohesion Types
+
+There are some common cohesion types described by Sam Newman. [<sup>8</sup>](#references)
+
+- **Technology Cohesion.** It is about building system elements and their relations prioritizing technical needs rather than the business ones. E.g., the layered architecture is technologically cohesive due to spreading the related business functionality across different layers.
+- **Business Functionality Cohesion.** It is about keeping the business domain functionality in one place and avoiding spreading the related functionality by different layers/services.
+
+As you can see, the Technology Cohesion is opposite to the Business Functionality Cohesion. This leads us to the following rule:
+
+> The Business Functionality Cohesion must be prioritized over the Technology Cohesion.
+
+## Coupling Types
+
+According to Sam Newman, there are the following coupling types: [<sup>8</sup>](#references)
+
+- **Implementation Coupling.** This is the regular type of coupling that must be always on radar for software developers. We say that modules are coupled when changes in one module lead to changes in another module.
+- **Temporal Coupling.** When runtime components are dependent on each other, there is a Temporal Coupling. E.g., when the Delivery department waits for the Printing department to complete their work, there is a temporal dependency.
+- **Deployment Coupling.** Deployment is always a risk, and for this reason, we try to deploy as less and as infrequently as possible. When the deployment of one module/service requires the deployment of another one, there is the Deployment Coupling. When talking about the Release Train (when everything is deployed in one go), we always talk about the Deployment Coupling and consider it as an antipattern.
+
+## Coupling and Cohesion Cases
 
 Let’s explore different cases. Below you can find a diagram that describes connections between “coupling” and “cohesion”. This may be useful for analyzing a system and creating an improvement plan.
 
@@ -112,7 +170,13 @@ Let’s explore different cases. Below you can find a diagram that describes con
 <figcaption>Pic. 3. Coupling and Cohesion.</figcaption>
 </figure>
 
-### **Case 1. Ideal — Loose Coupling, Tight Cohesion**
+### Constantine's Law
+
+There is a classical law defined by Larry Constantine in early 1968:
+
+> A structure is stable if cohesion is high (tight), and coupling is low (loose). — Larry Constantine [<sup>23</sup>](#references)
+
+### Case 1. Ideal — Loose Coupling, Tight Cohesion
 
 This is the desirable state of things inside a system. Such a system is manageable and extensible. In most cases, developers like working with similar systems as they are divided into logical parts; this leads to lower mental pressure during the development process.
 
@@ -195,7 +259,7 @@ Nothing to improve — this is the desired state of any system. Depending on bus
 
 There is nothing ideal in the world. A concept of the Ideal System is like a golden standard which is never fully achievable.
 
-### **Case 2. God Module — Tight Coupling, Tight Cohesion**
+### Case 2. God Module — Tight Coupling, Tight Cohesion
 
 Subjectively, this is the worst case. Such a system is hardly manageable and cannot be extended in an adequate manner. In this situation, there is a mess of system elements — modules are overloaded and expose unexpected <abbr title="Application Programming Interfaces">APIs</abbr>, intercommunications between modules are complex and unpredictable.
 
@@ -277,7 +341,7 @@ A system with God Module(s) needs improvement. Decompose God Module(s) into smal
 
 God Module is often a natural result of non-mature teams or <abbr title="As Soon As Possible">ASAP</abbr>-driven development. Maybe, to improve a system, you need to start from covering managerial gaps first.
 
-### **Case 3. Wrong Boundaries — Tight Coupling, Loose Cohesion**
+### Case 3. Wrong Boundaries — Tight Coupling, Loose Cohesion
 
 Such a situation happens when system modules are defined in a wrong way, and their <abbr title="Application Programming Interfaces">APIs</abbr> belong to different subjects. It may resemble the God Module but split into several sub-modules.
 
@@ -362,7 +426,7 @@ Such a system may appear in low-budget conditions. In case of the Microservice A
 
 Maybe, you need to start from solving business-level problems before changing the code. In some conditions, code changes make no sense without changing of the business vision.
 
-### **Case 4. Destructive Decoupling — Loose Coupling, Loose Cohesion**
+### Case 4. Destructive Decoupling — Loose Coupling, Loose Cohesion
 
 Such a system may resemble a handful of small balls thrown on the floor — sparse and chaotic. And it is rather hard to understand module boundaries and its applications.
 
@@ -438,7 +502,7 @@ In other rare cases, the Destructive Decoupling may be the target architecture. 
 
 All this means, that you may not want to change such a system with Destructive Decoupling, and that’s absolutely fine!
 
-### Recap
+### Recap on Coupling and Cohesion Cases
 
 The following table summarizes different cases of coupling and cohesion.
 
@@ -450,13 +514,15 @@ The following table summarizes different cases of coupling and cohesion.
 | 4. Destructive Decoupling — Loose Coupling, Loose Cohesion | There are lots of ungrouped elements with chaotic relations. | Organize related elements into modules. Keep strict module boundaries. |
 
 <figure>
-<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/everything-you-must-know-about-coupling-and-cohesion.webp" alt="Pic. 8. This is everything you must  know about coupling and cohesion.">
-<figcaption>Pic. 8. This is everything you must know about coupling and cohesion.</figcaption>
+<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/everything-you-must-know-about-coupling-and-cohesion-cases.webp" alt="Pic. 8. This is everything you must  know about coupling and cohesion cases.">
+<figcaption>Pic. 8. This is everything you must know about coupling and cohesion cases.</figcaption>
 </figure>
 
-## Microservice Architecture vs Modules
+## Side Notes
 
-From the first glance, you may think that this article tries to convince you using the Microservice Architecture. Like, split your system in modules/services, host them independently and live a happy life. Microservice Architecture is a modern solution that has its pros and cons. However, splitting a system into modules doesn’t always means that you must implement the Microservice Architecture.
+### Microservice Architecture vs Modules
+
+From the first glance, you may think that this article tries to convince you using the Microservice Architecture or similar to that. Like, split your system in modules/services, host them independently and live a happy life. Microservice Architecture is a modern solution that has its pros and cons. However, splitting a system into modules doesn’t always means that you must implement the Microservice Architecture.
 
 If your intention to improve a monolith system, I would recommend you following the Sam Newman's step-by-step tutorial for making monolith a better system. [<sup>8</sup>](#references) As an example, you may consider splitting a monolith into a modular monolith, which aligns with all concepts described in this article.
 
@@ -464,7 +530,7 @@ If your intention to improve a monolith system, I would recommend you following 
 
 My strong recommendation is to proceed with deep investigation of foundational terms that you can find at the start of the article. If you want to improve a system you are responsible for, you need to rely only on trustworthy resources like books and official guides.
 
-If you don’t know what kind your system of, you may want to start from the introspection. This means you need to understand how the given system operates and document it properly according to the <abbr title="Software Engineering Institute">SEI recommendations. [<sup>2</sup>](#references) It will be impossible to guess about a system without appropriate views.
+If you don’t know what kind your system of, you may want to start from the introspection. This means you need to understand how the given system operates and document it properly according to the <abbr title="Software Engineering Institute">SEI</abbr> recommendations. [<sup>2</sup>](#references) It will be impossible to guess about a system without appropriate views.
 
 Try to concentrate not at code but at the product. Code makes the product but not backward. That is, try to design the architecture that fits requirements and avoid changes and synthetic improvements just for fun.
 
@@ -494,3 +560,4 @@ Architecture as a whole is more important than coupling and cohesion themselves.
 20.  <a href="https://martinfowler.com/bliki/BoundedContext.html" rel="noopener noreferrer" target="_blank">Bounded Context - Article by Martin Fowler</a>
 21.  <a href="https://martinfowler.com/bliki/SacrificialArchitecture.html" rel="noopener noreferrer" target="_blank">Sacrificial Architecture - Article by Martin Fowler</a>
 22.  <a href="https://martinfowler.com/bliki/ConwaysLaw.html" rel="noopener noreferrer" target="_blank">Conway’s Law - Article by Martin Fowler</a>
+23.  <a href="http://principles-wiki.net/principles:constantine_s_law" rel="noopener noreferrer" target="_blank">Constantine's Law - Article on Principles Wiki</a>
