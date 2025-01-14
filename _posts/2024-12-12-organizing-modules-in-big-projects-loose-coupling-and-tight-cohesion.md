@@ -145,7 +145,7 @@ This means that understanding coupling and cohesion is crucial at different leve
 
 At every level, the rule is the same — aim to have as few connections as possible. This rule looks obvious when you imagine a big group of people that build a spaceship — the more you chat with everyone about everything, the longer you do your task.
 
-## Cohesion Types
+## Major Cohesion Types
 
 There are some common cohesion types described by Sam Newman. [<sup>8</sup>](#references)
 
@@ -156,7 +156,7 @@ As you can see, the Technology Cohesion is opposite to the Business Functionalit
 
 > The Business Functionality Cohesion must be prioritized over the Technology Cohesion.
 
-## Coupling Types
+## Major Coupling Types
 
 According to Sam Newman, there are the following coupling types: [<sup>8</sup>](#references)
 
