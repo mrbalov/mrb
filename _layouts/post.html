@@ -73,9 +73,8 @@ layout: compress
             {% capture post_contents %}{% include post_contents.md %}{% endcapture %}
             {{ post_contents | markdownify }}
 
-            {{ content | inject_anchors }}
+            {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=1 h_max=4 %}
 
-            <!-- {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=1 h_max=4 %} -->
             {% if page.tweet %}
               <p>
                 Comment this article on 
