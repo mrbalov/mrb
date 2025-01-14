@@ -13,6 +13,25 @@ tweet: 1877834515722244480
 toc: true
 ---
 
+## TL;DR
+
+- **Coupling** is when things change together.
+- **Cohesion** is when things that must change together, stay together.
+- **Constantine’s Law:** A structure is stable if **cohesion is high (tight)**, and the **coupling is low (loose)**.
+- Coupling and cohesion cases:
+  - **Ideal** — Loose Coupling, Tight Cohesion.
+  - **God Module** — Tight Coupling, Tight Cohesion.
+  - **Wrong Boundaries** — Tight Coupling, Loose Cohesion.
+  - **Destructive Decoupling** — Loose Coupling, Loose Cohesion.
+- Major cohesion types:
+  - **Technology Cohesion:** When technology needs are prioritized over business needs. Like in layered architecture, where business functionalities are spread across different layers. This should be avoided
+  - **Business Functionality Cohesion:** When business domain functionality is properly scoped and kept together. This should be aimed.
+- Major coupling types:
+  - **Implementation Coupling:** Changes in one code/module lead to changes in another code/module.
+  - **Temporal Coupling:** When runtime components wait for each other.
+  - **Deployment Coupling:** When the deployment of one module/service requires the deployment of another module/service.
+  - **Domain Coupling:** When business domains (represented as services) depend on each other.
+
 ## Problem
 
 How do you organize system modules? I hope you place elements related to each other together (module) and then set up connections between those groups of elements. Right?
@@ -144,6 +163,7 @@ According to Sam Newman, there are the following coupling types: [<sup>8</sup>](
 - **Implementation Coupling.** This is the regular type of coupling that must be always on radar for software developers. We say that modules are coupled when changes in one module lead to changes in another module.
 - **Temporal Coupling.** When runtime components are dependent on each other, there is a Temporal Coupling. E.g., when the Delivery department waits for the Printing department to complete their work, there is a temporal dependency.
 - **Deployment Coupling.** Deployment is always a risk, and for this reason, we try to deploy as less and as infrequently as possible. When the deployment of one module/service requires the deployment of another one, there is the Deployment Coupling. When talking about the Release Train (when everything is deployed in one go), we always talk about the Deployment Coupling and consider it as an antipattern.
+- **Domain Coupling.** This type of coupling happens naturally when business domains (usually represented as services) depend on each other. The same as with the Temporal Coupling, the Printing and Delivery departments may depend on each other in different aspects, which makes them domain-coupled.
 
 ## Coupling and Cohesion Cases
 

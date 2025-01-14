@@ -48,20 +48,7 @@ layout: compress
             {% endif %}
             <h1 class="header-title" itemprop="headline">{{ page.title | escape }}</h1>
             {% if page.date %}
-            <div class="post-meta">
-              <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                {{ page.date | date: "%b %d, %Y" }}
-              </time>
-              <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-                <span itemprop="name">{{ site.author.name }}</span>
-              </span>
-              <time hidden datetime="{{ page.modified | date_to_xmlschema }}" itemprop="dateModified">
-                {{ page.date | date: "%b %d, %Y" }}
-              </time>
-              <span hidden itemprop="publisher" itemtype="Person">{{ site.author.name }}</span>
-              <span hidden itemprop="image">{{ page.image }}</span>
-              <span hidden itemprop="mainEntityOfPage">{{ page.excerpt }}</span>
-            </div>
+              {% include post_meta.html %}
             {% endif %}
           </header>
           <div class="page-content" itemprop="articleBody">
@@ -74,19 +61,6 @@ layout: compress
             {{ post_contents | markdownify }}
 
             {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=1 h_max=4 %}
-
-            {% if page.tweet %}
-              <p>
-                Comment this article on 
-                <a
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://x.com/{{site.author.x}}/status/{{page.tweet}}"
-                >
-                  Twitter
-                </a>.
-              </p>
-            {% endif %}
           </div>
         </article>
       

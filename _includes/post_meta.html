@@ -1,0 +1,27 @@
+<div class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: "%b %d, %Y" }}
+    </time>
+
+    {% if page.tweet %}
+        <a
+            class="social-button"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://x.com/{{site.author.x}}/status/{{page.tweet}}"
+            title="View this post on X"
+        >
+            {% include icon_x.html %} 
+        </a>
+    {% endif %}
+
+    <time hidden datetime="{{ page.modified | date_to_xmlschema }}" itemprop="dateModified">
+        {{ page.date | date: "%b %d, %Y" }}
+    </time>
+    <span hidden itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <span itemprop="name">{{ site.author.name }}</span>
+    </span>
+    <span hidden itemprop="publisher" itemtype="Person">{{ site.author.name }}</span>
+    <span hidden itemprop="image">{{ page.image }}</span>
+    <span hidden itemprop="mainEntityOfPage">{{ page.excerpt }}</span>
+</div>

@@ -1,6 +1,6 @@
 ## Contents
 
 <details>
-    <summary>Click to expand</summary>
+    <summary>Expand</summary>
     {{ content | toc_only }}
 </details>
