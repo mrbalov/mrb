@@ -65,11 +65,28 @@ layout: compress
             {% endif %}
           </header>
           <div class="page-content" itemprop="articleBody">
-            {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=1 h_max=4 %}
+            <figure>
+              <img src="{{ page.image }}" alt="{{ page.image_alt }}">
+              <figcaption>{{ page.image_caption }}</figcaption>
+            </figure>
+
+            {% capture post_contents %}{% include post_contents.md %}{% endcapture %}
+            {{ post_contents | markdownify }}
+
+            {{ content | inject_anchors }}
+
+            <!-- {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=1 h_max=4 %} -->
             {% if page.tweet %}
-            <p>Comments this article on 
-              <a href="https://twitter.com/{{site.twitter}}/status/{{page.tweet}}">Twitter</a>.
-            </p>
+              <p>
+                Comment this article on 
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://x.com/{{site.author.x}}/status/{{page.tweet}}"
+                >
+                  Twitter
+                </a>.
+              </p>
             {% endif %}
           </div>
         </article>

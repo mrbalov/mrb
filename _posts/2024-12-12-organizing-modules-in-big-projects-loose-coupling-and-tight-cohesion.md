@@ -1,33 +1,16 @@
 ---
+layout: post
 title: Organizing Modules in Big Projects — Loose Coupling and Tight Cohesion
 date: 2024-12-12 12:00:00 +02:00
 modified: 2024-12-12 12:00:00 +02:00
 tags: [architecture, modularization]
 description: Proper modularization is crucial, especially for big projects. This is the main thing that makes your project extensible. There are two important things that you should consider when making your system modular — coupling and cohesion.
 image: /assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/cover.webp
+image_alt: Cover - Abstract Vision on Coupling and Cohesion by DALL-E AI.
+image_caption: Illustration by <a href="https://openai.com/index/dall-e-3/" rel="noopener noreferrer" target="_blank">DALL-E</a>
+tweet: 1877834515722244480
+toc: true
 ---
-
-<figure>
-<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/cover.webp" alt="Cover - Abstract Vision on Coupling and Cohesion by DALL-E AI.">
-<figcaption>Illustration by <a href="https://openai.com/index/dall-e-3/" rel="noopener noreferrer" target="_blank">DALL-E</a></figcaption>
-</figure>
-
-## Contents
-
-- Problem
-- Terminology
-- Context
-  - Foundational Concepts
-  - Architectural Structures
-- Coupling
-- Cohesion
-- Coupling and Cohesion Levels
-- Cohesion Types
-- Coupling Types
-- Side Notes
-  - Microservice Architecture vs Modules
-- What is Next?
-- References
 
 ## Problem
 
