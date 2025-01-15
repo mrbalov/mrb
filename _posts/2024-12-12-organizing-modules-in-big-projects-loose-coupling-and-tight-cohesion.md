@@ -90,8 +90,8 @@ Coupling is something like external connections between system elements. Tight c
 Technically, we can measure the value of coupling — this is the number of connections between system elements (functions, objects, modules, etc.). The rule states that a system should have the lowest possible number of connections. In this case, we can be sure that there are only expected connections, and we can manage them effectively.
 
 <figure>
-<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/coupling.webp" alt="Pic. 1. Coupling.">
-<figcaption>Pic. 1. Coupling.</figcaption>
+<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/coupling.webp" alt="Coupling.">
+<figcaption>Coupling.</figcaption>
 </figure>
 
 For sure, there is no easy way to calculate the number of connections. Practically, it may not be useful for the development team — at least because it has a relative nature and can't say exactly whether the specific number of connections is good or bad.
@@ -119,8 +119,8 @@ There are a lot of things we can call a “group”:
 - And so on…
 
 <figure>
-<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/cohesion.webp" alt="Pic. 2. Cohesion.">
-<figcaption>Pic. 2. Cohesion.</figcaption>
+<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/cohesion.webp" alt="Cohesion.">
+<figcaption>Cohesion.</figcaption>
 </figure>
 
 It is important, because in a cohesive system there are much fewer connections between elements. This leads to better management of these connections and we may be more sure that they are expected.
@@ -145,6 +145,11 @@ This means that understanding coupling and cohesion is crucial at different leve
 
 At every level, the rule is the same — aim to have as few connections as possible. This rule looks obvious when you imagine a big group of people that build a spaceship — the more you chat with everyone about everything, the longer you do your task.
 
+<figure>
+  <img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/coupling-and-cohesion-levels.webp" alt="Coupling and Cohesion Levels.">
+  <figcaption>Coupling and Cohesion Levels.</figcaption>
+</figure>
+
 ## Major Cohesion Types
 
 There are some common cohesion types described by Sam Newman. [<sup>8</sup>](#references)
@@ -156,6 +161,11 @@ As you can see, the Technology Cohesion is opposite to the Business Functionalit
 
 > The Business Functionality Cohesion must be prioritized over the Technology Cohesion.
 
+<figure>
+  <img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/major-cohesion-types.webp" alt="Major Cohesion Types.">
+  <figcaption>Major Cohesion Types.</figcaption>
+</figure>
+
 ## Major Coupling Types
 
 According to Sam Newman, there are the following coupling types: [<sup>8</sup>](#references)
@@ -165,13 +175,18 @@ According to Sam Newman, there are the following coupling types: [<sup>8</sup>](
 - **Deployment Coupling.** Deployment is always a risk, and for this reason, we try to deploy as less and as infrequently as possible. When the deployment of one module/service requires the deployment of another one, there is the Deployment Coupling. When talking about the Release Train (when everything is deployed in one go), we always talk about the Deployment Coupling and consider it as an antipattern.
 - **Domain Coupling.** This type of coupling happens naturally when business domains (usually represented as services) depend on each other. The same as with the Temporal Coupling, the Printing and Delivery departments may depend on each other in different aspects, which makes them domain-coupled.
 
+<figure>
+  <img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/major-coupling-types.webp" alt="Major Coupling Types.">
+  <figcaption>Major Coupling Types.</figcaption>
+</figure>
+
 ## Coupling and Cohesion Cases
 
 Let’s explore different cases. Below you can find a diagram that describes connections between “coupling” and “cohesion”. This may be useful for analyzing a system and creating an improvement plan.
 
 <figure>
-<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/coupling-and-cohesion.webp" alt="Pic. 3. Coupling and Cohesion.">
-<figcaption>Pic. 3. Coupling and Cohesion.</figcaption>
+<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/coupling-and-cohesion.webp" alt="Coupling and Cohesion.">
+<figcaption>Coupling and Cohesion.</figcaption>
 </figure>
 
 ### Constantine's Law
@@ -187,8 +202,8 @@ This is the desirable state of things inside a system. Such a system is manageab
 Below you can see how connections between elements may look like in such a system.
 
 <figure>
-<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/ideal-loose-coupling-tight-cohesion.webp" alt="Pic. 4. Ideal - Loose Coupling, Tight Cohesion.">
-<figcaption>Pic. 4. Ideal - Loose Coupling, Tight Cohesion.</figcaption>
+<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/ideal-loose-coupling-tight-cohesion.webp" alt="Ideal - Loose Coupling, Tight Cohesion.">
+<figcaption>Ideal - Loose Coupling, Tight Cohesion.</figcaption>
 </figure>
 
 How to achieve such an elements arrangement? The rule sounds simple: organize related elements in groups (modules) and set up connections between those groups.
@@ -268,8 +283,8 @@ There is nothing ideal in the world. A concept of the Ideal System is like a gol
 Subjectively, this is the worst case. Such a system is hardly manageable and cannot be extended in an adequate manner. In this situation, there is a mess of system elements — modules are overloaded and expose unexpected <abbr title="Application Programming Interfaces">APIs</abbr>, intercommunications between modules are complex and unpredictable.
 
 <figure>
-<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/god-module-tight-coupling-tight-cohesion.webp" alt="Pic. 5. God Module — Tight Coupling, Tight Cohesion.">
-<figcaption>Pic. 5. God Module — Tight Coupling, Tight Cohesion.</figcaption>
+<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/god-module-tight-coupling-tight-cohesion.webp" alt="God Module — Tight Coupling, Tight Cohesion.">
+<figcaption>God Module — Tight Coupling, Tight Cohesion.</figcaption>
 </figure>
 
 #### Example
@@ -352,8 +367,8 @@ Such a situation happens when system modules are defined in a wrong way, and the
 The Wrong Boundaries case may often mean that a system modules don’t follow the <abbr title="Single-Responsibility Principle">SRP</abbr> (Single-Responsibility Principle). [<sup>1</sup>](#references) When the <abbr title="Single-Responsibility Principle">SRP</abbr> is in place, module boundaries are correct, and the module <abbr title="Application Programming Interface">API</abbr> is predictable and concise.
 
 <figure>
-<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/wrong-boundaries-tight-coupling-loose-cohesion.webp" alt="Pic. 6. Wrong Boundaries — Tight Coupling, Loose Cohesion.">
-<figcaption>Pic. 6. Wrong Boundaries — Tight Coupling, Loose Cohesion.</figcaption>
+<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/wrong-boundaries-tight-coupling-loose-cohesion.webp" alt="Wrong Boundaries — Tight Coupling, Loose Cohesion.">
+<figcaption>Wrong Boundaries — Tight Coupling, Loose Cohesion.</figcaption>
 </figure>
 
 #### Example
@@ -437,8 +452,8 @@ Such a system may resemble a handful of small balls thrown on the floor — spar
 This situation may look quite close to the God Module one — lots of elements with non-deterministic connections. However, there is an important distinction between these two situations. Usually, talking about the God Module, we imagine a system element with somehow defined boundaries and a mixed <abbr title="Application Programming Interface">API</abbr>. In case of the Destructive Decoupling, there are no module boundaries at all — a system consists of elements that are not grouped by a domain (criteria).
 
 <figure>
-<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/destructive-decoupling-loose-coupling-loose-cohesion.webp" alt="Pic. 7. Destructive Decoupling — Loose Coupling, Loose Cohesion.">
-<figcaption>Pic. 7. Destructive Decoupling — Loose Coupling, Loose Cohesion.</figcaption>
+<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/destructive-decoupling-loose-coupling-loose-cohesion.webp" alt="Destructive Decoupling — Loose Coupling, Loose Cohesion.">
+<figcaption>Destructive Decoupling — Loose Coupling, Loose Cohesion.</figcaption>
 </figure>
 
 #### Example
@@ -518,8 +533,8 @@ The following table summarizes different cases of coupling and cohesion.
 | 4. Destructive Decoupling — Loose Coupling, Loose Cohesion | There are lots of ungrouped elements with chaotic relations. | Organize related elements into modules. Keep strict module boundaries. |
 
 <figure>
-<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/everything-you-must-know-about-coupling-and-cohesion-cases.webp" alt="Pic. 8. This is everything you must  know about coupling and cohesion cases.">
-<figcaption>Pic. 8. This is everything you must know about coupling and cohesion cases.</figcaption>
+<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/everything-you-must-know-about-coupling-and-cohesion-cases.webp" alt="This is everything you must  know about coupling and cohesion cases.">
+<figcaption>This is everything you must know about coupling and cohesion cases.</figcaption>
 </figure>
 
 ## Side Notes
