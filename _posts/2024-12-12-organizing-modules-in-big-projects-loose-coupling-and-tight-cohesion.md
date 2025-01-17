@@ -59,8 +59,8 @@ The following terminology is important for gaining the right understanding of th
 
 When talking about modularization, we must always keep in mind the following foundational concepts:
 
-- **DDD** - Domain-Driven Design. This is the classical concept from which everything starts. [<sup>9</sup>](#references)
-- **SOA** — Service-Oriented Architecture. [<sup>4</sup>](#references)
+- **DDD**. Domain-Driven Design. This is the classical concept from which everything starts. [<sup>9</sup>](#references)
+- **SOA**. Service-Oriented Architecture. [<sup>4</sup>](#references)
 - **Microservice Architecture.** It always goes hand-in-hand with the modularization problem. There are many different techniques for identifying the right service boundaries, almost the same as arranging the proper system modularization. [<sup>5</sup>](#references) [<sup>8</sup>](#references)
 - **Micro Frontends.** It is similar to the Microservice Architecture, but for the frontend — when independent <abbr title="User Interface">UI</abbr> parts are gathered in a seamless application via some mediator. [<sup>6</sup>](#references)
 - **Atomic Design.** Usually, it is applied to frontend development. However, in my opinion, its concepts are handy for designing systems with proper modularization that enables flexibility and extensibility. [<sup>7</sup>](#references)
