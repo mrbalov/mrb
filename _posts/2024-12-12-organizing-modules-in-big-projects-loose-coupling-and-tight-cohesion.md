@@ -2,7 +2,7 @@
 layout: post
 title: Organizing Modules in Big Projects — Loose Coupling and Tight Cohesion
 date: 2024-12-12 12:00:00 +02:00
-modified: 2024-12-12 12:00:00 +02:00
+modified: 2025-01-17 12:00:00 +02:00
 tags: [architecture, modularization]
 description: Proper modularization is crucial, especially for big projects. This is the main thing that makes your project extensible. There are two important things that you should consider when making your system modular — coupling and cohesion.
 excerpt: Proper modularization is crucial, especially for big projects. This is the main thing that makes your project extensible. There are two important things that you should consider when making your system modular — coupling and cohesion.
@@ -182,16 +182,16 @@ According to Sam Newman, there are the following coupling types: [<sup>8</sup>](
 
 ## Coupling and Cohesion Cases
 
-Let’s explore different cases. Below you can find a diagram that describes connections between “coupling” and “cohesion”. This may be useful for analyzing a system and creating an improvement plan.
+Let’s explore different cases. Below is a diagram that describes connections between “coupling” and “cohesion”. This may be useful for analyzing a system and creating an improvement plan.
 
 <figure>
-<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/coupling-and-cohesion.webp" alt="Coupling and Cohesion.">
-<figcaption>Coupling and Cohesion.</figcaption>
+<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/coupling-and-cohesion-cases.webp" alt="Coupling and Cohesion Cases.">
+<figcaption>Coupling and Cohesion Cases.</figcaption>
 </figure>
 
 ### Constantine's Law
 
-There is a classical law defined by Larry Constantine in early 1968:
+Larry Constantine defines a classical law in early 1968:
 
 > A structure is stable if cohesion is high (tight), and coupling is low (loose). — Larry Constantine [<sup>23</sup>](#references)
 
@@ -199,7 +199,7 @@ There is a classical law defined by Larry Constantine in early 1968:
 
 This is the desirable state of things inside a system. Such a system is manageable and extensible. In most cases, developers like working with similar systems as they are divided into logical parts; this leads to lower mental pressure during the development process.
 
-Below you can see how connections between elements may look like in such a system.
+Below you can see how connections between elements may look in such a system.
 
 <figure>
 <img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/ideal-loose-coupling-tight-cohesion.webp" alt="Ideal - Loose Coupling, Tight Cohesion.">
@@ -513,13 +513,13 @@ Usually, you may diagnose the Destructive Decoupling by the following simple cri
 
 #### What’s Next?
 
-In some cases, such a system needs improvement. If you strongly decided to rework such a system, you should organize related elements into modules and keep strict module boundaries.
+In some cases, such a system needs improvement. If you strongly decide to rework such a system, you should organize related elements into modules and keep strict module boundaries.
 
 Destructive Decoupling may naturally appear in small systems and sub-systems. A possible reason is that there may not be a big sense in organizing elements into modules if the number of elements is small.
 
 In other rare cases, the Destructive Decoupling may be the target architecture. The main idea here is to have lots of small elements connected together with a mediator. Sometimes it works.
 
-All this means, that you may not want to change such a system with Destructive Decoupling, and that’s absolutely fine!
+All this means, that you may not want to change such a system with Destructive Decoupling, and that’s fine!
 
 ### Recap on Coupling and Cohesion Cases
 
