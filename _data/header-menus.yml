@@ -9,3 +9,7 @@
 - title: About
   url: /about/
   external: false
+
+- title: Backlog
+  url: /backlog/
+  external: false

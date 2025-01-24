@@ -84,8 +84,23 @@
     color: $text-link-blue;
     text-decoration: none;
 
+    -webkit-transition: all 75ms ease-in;
+    -moz-transition: all 75ms ease-in;
+    -ms-transition: all 75ms ease-in;
+    -o-transition: all 75ms ease-in;
+    transition: all 75ms ease-in;
+
+    &[target="_blank"]::after {
+      content: "\00a0↪";
+      font-size: $x-small-font-size;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+
     &:hover {
       color: $text-link-blue-active;
+      text-decoration: underline;
     }
 
     &:focus {
