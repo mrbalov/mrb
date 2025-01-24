@@ -98,13 +98,12 @@
       vertical-align: baseline;
     }
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       color: $text-link-blue-active;
       text-decoration: underline;
-    }
-
-    &:focus {
-      color: $text-link-blue;
+      text-decoration-color: $text-link-blue-active;
     }
   }
 

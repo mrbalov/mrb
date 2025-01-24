@@ -35,6 +35,7 @@ body[data-theme="dark"] {
       &:active,
       &:focus {
         color: $dark-text-link-blue-active;
+        text-decoration-color: $dark-text-link-blue-active;
       }
     }
 
