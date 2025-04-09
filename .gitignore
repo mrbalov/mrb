@@ -4,3 +4,4 @@ _site/
 .jekyll-metadata
 klise-*.gem
 Gemfile.lock
+.DS_Store
