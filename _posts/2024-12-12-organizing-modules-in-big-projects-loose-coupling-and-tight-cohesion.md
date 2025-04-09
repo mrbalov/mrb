@@ -90,8 +90,11 @@ Coupling is something like external connections between system elements. Tight c
 Technically, we can measure the value of coupling — this is the number of connections between system elements (functions, objects, modules, etc.). The rule states that a system should have the lowest possible number of connections. In this case, we can be sure that there are only expected connections, and we can manage them effectively.
 
 <figure>
-<img src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/coupling.webp" alt="Coupling.">
-<figcaption>Coupling.</figcaption>
+  <img
+    src="/assets/blog/organizing-modules-in-big-projects-loose-coupling-and-tight-cohesion/coupling.webp"
+    alt="Coupling."
+  >
+  <figcaption>Coupling.</figcaption>
 </figure>
 
 For sure, there is no easy way to calculate the number of connections. Practically, it may not be useful for the development team — at least because it has a relative nature and can't say exactly whether the specific number of connections is good or bad.

@@ -110,9 +110,23 @@ The context-agnostic dynamic content is not a big problem, compared to the conte
 2. **ISR** (Incremental Static Regeneration) is a feature of the <a href="https://nextjs.org/" rel="noopener noreferrer" target="_blank">Next.js</a> framework. It allows to re-generate a static content with a defined time interval. The content generation happens on-demand (once a user requests the page).
 3. **DPR** (Distributed Persistent Rendering) is a general approach to building web pages on-demand and in a distributed manner. E.g., with the Netlify platform, the ODB (On-Demand Builders) implement the DPR, which allows to building a static content on-demand and invalidating it in a desired time interval. In modern frontend platforms, like Netlify, it is based on <a href="https://en.wikipedia.org/wiki/Edge_computing" rel="noopener noreferrer" target="_blank">Edge Computing</a>.
 
-[pic - context-agnostic rendering cases with event]
-[pic - context-agnostic rendering cases with isr]
-[pic - context-agnostic rendering cases with drp]
+<figure>
+  <img
+    src="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/context-agnostic-dynamic-content-with-event--large.webp"
+    alt="Diagram: Context-Agnostic Dynamic Content with Event."
+  >
+  <figcaption>Context-Agnostic Dynamic Content with Event.</figcaption>
+</figure>
+
+<figure>
+  <img
+    src="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/context-agnostic-dynamic-content-with-isr--large.webp"
+    alt="Diagram: Context-Agnostic Dynamic Content with ISR."
+  >
+  <figcaption>Context-Agnostic Dynamic Content with ISR.</figcaption>
+</figure>
+
+[pic - context-agnostic rendering cases with dpr]
 
 The context-aware dynamic content is a tricky thing. My recommendation is to consider the context-aware dynamic content as a no-go case for the SSG. The main reason is that it makes no sense to generate a static page for a single user — there are no benefits from both performance and financial perspectives. There are the following options that may be considered in this case:
 
