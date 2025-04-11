@@ -118,6 +118,10 @@ The context-agnostic dynamic content is not a big problem, compared to the conte
   <figcaption>Context-Agnostic Dynamic Content with Event.</figcaption>
 </figure>
 
+The diagram below intentionally misses Edge Computing. As the ISR is a feature of Next.js, it puts some limitations on its implementation by service providers. Shortly, Vercel re-invented DPR in their manner, using the same SWR (Stale-Shile-Revalidate) caching strategy under the hood. To start with the topics, you can review <a href="https://www.netlify.com/blog/how-we-run-nextjs/" rel="noopener noreferrer" target="_blank">this blog bost by Netlify</a> [36], describing problems related to hosting Next.js on anything that is not Vercel. Probably, when you read my article, the problem has already been solved, and Next.js has become more open to the community.
+
+Desirably, the ISR must use Edge Computing on all the platforms.
+
 <figure>
   <img
     src="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/context-agnostic-dynamic-content-with-isr--large.webp"
@@ -126,7 +130,13 @@ The context-agnostic dynamic content is not a big problem, compared to the conte
   <figcaption>Context-Agnostic Dynamic Content with ISR.</figcaption>
 </figure>
 
-[pic - context-agnostic rendering cases with dpr]
+<figure>
+  <img
+    src="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/context-agnostic-dynamic-content-with-dpr--large.webp"
+    alt="Diagram: Context-Agnostic Dynamic Content with DPR."
+  >
+  <figcaption>Context-Agnostic Dynamic Content with DPR.</figcaption>
+</figure>
 
 The context-aware dynamic content is a tricky thing. My recommendation is to consider the context-aware dynamic content as a no-go case for the SSG. The main reason is that it makes no sense to generate a static page for a single user — there are no benefits from both performance and financial perspectives. There are the following options that may be considered in this case:
 
@@ -329,3 +339,4 @@ The Composable Frontend Architecture is built upon the Jamstack Architecture, wh
 33. <a href="https://mia-platform.eu/blog/composable-frontend/" rel="noopener noreferrer" target="_blank">Enhance your Composable Frontend Architecture with Micro-Frontends - Commercial Article on Mia Platform</a>
 34. <a href="https://blog.bitsrc.io/composable-frontend-architecture-for-2024-562f309efe43" rel="noopener noreferrer" target="_blank">Composable Frontend Architecture for 2024 - Medium</a>
 35. <a href="https://alokai.com/blog/composable-architecture" rel="noopener noreferrer" target="_blank">What is Composable Architecture? - Commercial Article on Alokai</a>
+36. <a href="https://www.netlify.com/blog/how-we-run-nextjs/" rel="noopener noreferrer" target="_blank">How we run Next.js today — and what should change - Article by Netlify</a>
