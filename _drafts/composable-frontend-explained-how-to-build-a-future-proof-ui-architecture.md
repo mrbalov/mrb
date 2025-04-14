@@ -102,7 +102,21 @@ There are two kinds of dynamic content:
 1. **Context-Agnostic Dynamic Content.** This kind of dynamic content is based on the data from a backend and is the same for all the users (or a subset of users, e.g., within a specific location). For instance, it may be a header navigation coming from a headless CMS (content managers may want to extend it on the fly when creating new pages).
 2. **Context-Aware Dynamic Content.** This kind of dynamic content depends on the execution context. Usually, it is some information stored at the browser level like session/local storage, cookies, and so on. For instance, the context-aware dynamic content may be a user profile, a reading list, or a cart, which is based on the user’s JWT stored in cookies.
 
-[pic - dynamic content kinds]
+<figure>
+  <img
+    src="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/context-agnostic-dynamic-content--large.webp"
+    alt="Diagram: Context-Agnostic Dynamic Content."
+  >
+  <figcaption>Context-Agnostic Dynamic Content.</figcaption>
+</figure>
+
+<figure>
+  <img
+    src="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/context-aware-dynamic-content--large.webp"
+    alt="Diagram: Context-Aware Dynamic Content."
+  >
+  <figcaption>Context-Aware Dynamic Content.</figcaption>
+</figure>
 
 The context-agnostic dynamic content is not a big problem, compared to the context-aware one. There are the following solutions that address this problem:
 
