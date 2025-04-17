@@ -154,8 +154,16 @@ Desirably, the ISR must use Edge Computing on all the platforms.
 
 The context-aware dynamic content is a tricky thing. My recommendation is to consider the context-aware dynamic content as a no-go case for the SSG. The main reason is that it makes no sense to generate a static page for a single user — there are no benefits from both performance and financial perspectives. There are the following options that may be considered in this case:
 
-1. **SSR** (Server-Side Rendering) is a general approach to rendering web pages on a server in a dedicated manner for every request. For some old monolithic-oriented architectural patterns like MVC that were built around PHP, Python, and Java, it was a common thing. For this reason, SSR is sometimes mixed with those messy architectures, and discarded due to bad reputation as a result. However, SSR is a separate thing from the monolithic stuff, and may be successfully used for Composable Frontends with headless data providers.
+1. **SSR** (Server-Side Rendering) is a general approach to rendering web pages on a server in a dedicated manner for every request. For some old monolithic-oriented architectural patterns like MVC that were built around PHP, Python, and Java, it was a common thing. For this reason, SSR is sometimes mixed with those messy architectures, and discarded due to bad reputation as a result. However, SSR is a separate thing from the monolithic stuff, and may be successfully used for Composable Frontends with headless data providers. In many cases, SSR and SSG go together: context-aware pages are served with SSR, and content-agnostic ones with SSG.
 2. **<a href="https://www.patterns.dev/vanilla/islands-architecture/" rel="noopener noreferrer" target="_blank">Islands Architecture</a>** [23] is a general idea of rendering static and dynamic elements of web pages separately and independently. It is a very fresh idea that lies in a foundation of cutting-edge and exotic frameworks like <a href="https://astro.build/" rel="noopener noreferrer" target="_blank">Astro</a> [24] and <a href="https://tropical.js.org/" rel="noopener noreferrer" target="_blank">Tropical</a> [25]. If you start a new project, or Micro Frontends are in place, it may be an option for you to pre-render static or context-agnostic dynamic content on a server and render context-aware dynamic content (widgets) on the client. Conceptually, it aligns well with the Composable Frontend.
+
+<figure>
+  <img
+    src="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/context-aware-dynamic-content-with-ssr-and-ssg--large.webp"
+    alt="Diagram: Context-Aware Dynamic Content with SSR and SSG."
+  >
+  <figcaption>Context-Aware Dynamic Content with SSR + SSG.</figcaption>
+</figure>
 
 [pic - context-aware rendering cases]
 
