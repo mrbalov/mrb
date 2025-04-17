@@ -62,7 +62,7 @@ There is the following terminology around what the article is built on. Please, 
 1. **<a href="https://www.netlify.com/guide-to-composable-architecture/" rel="noopener noreferrer" target="_blank">Composable Architecture</a>** [10] is an architectural style that promotes building software systems from small, independent, and reusable blocks, similar to Lego.
 2. **<a href="https://microfrontend.dev/" rel="noopener noreferrer" target="_blank">Composable Frontend</a>** [14] is a particular case of the Composable Architecture, that promotes building frontends from small and independent bits of UI, similar to Lego.
 3. **<a href="https://micro-frontends.org/" rel="noopener noreferrer" target="_blank">Micro Frontends</a>** [3][14] is an architectural style that is all about building frontends around business domains, that are independently developed and deployed. Similar to the Microservices Architecture.
-4. **<a href="https://jamstack.org/" rel="noopener noreferrer" target="_blank">Jamstack</a>** [5] “is an architectural approach that decouples the web experience layer from data and business logic, improving flexibility, scalability, performance, and maintainability”.
+4. **<a href="https://jamstack.org/" rel="noopener noreferrer" target="_blank">Jamstack</a>** [5][37] stands for JavaScript, APIs, and Markup. “It is an architectural approach that decouples the web experience layer from data and business logic, improving flexibility, scalability, performance, and maintainability”.
 5. **<a href="https://jamstack.org/" rel="noopener noreferrer" target="_blank">Atomic Deploys</a>** [5] is a way of arranging zero-downtime releases by immutable builds, that are replaced in the runtime and not causing the maintenance period. Close to the blue-green deployment.
 6. **<a href="https://atomicdesign.bradfrost.com/" rel="noopener noreferrer" target="_blank">Atomic Design</a>** [13] is an approach of building UIs from elements split by different levels: atoms, molecules, organisms, templates, and pages.
 7. **<a href="https://en.m.wikipedia.org/wiki/Headless_software" rel="noopener noreferrer" target="_blank">Headless Software</a>** [17] is a kind of software that can operate without a GUI. E.g., for CMS, it is not required to present data in GUI.
@@ -165,7 +165,13 @@ The context-aware dynamic content is a tricky thing. My recommendation is to con
   <figcaption>Context-Aware Dynamic Content with SSR + SSG.</figcaption>
 </figure>
 
-[pic - context-aware rendering cases]
+<figure>
+  <img
+    src="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/context-aware-dynamic-content-with-islands-architecture--large.webp"
+    alt="Diagram: Context-Aware Dynamic Content with Islands Architecture."
+  >
+  <figcaption>Context-Aware Dynamic Content with Islands Architecture.</figcaption>
+</figure>
 
 ### Atomic Deploys
 
@@ -335,8 +341,8 @@ The Composable Frontend Architecture is built upon the Jamstack Architecture, wh
 7. <a href="https://www.amazon.com/Micro-Frontends-Action-Michael-Geers/dp/1617296872" rel="noopener noreferrer" target="_blank">Micro Frontends in Action - Book by Michael Geers on Amazon</a>
 8. <a href="https://martinfowler.com/articles/injection.html" rel="noopener noreferrer" target="_blank">Inversion of Control Containers and the Dependency Injection Pattern - Article by Martin Fowler</a>
 9. <a href="https://machalliance.org/" rel="noopener noreferrer" target="_blank">MACH Alliance</a>
-10. <a href="https://www.netlify.com/guide-to-composable-architecture/" rel="noopener noreferrer" target="_blank">Guide to Composable Architecture - Article by Netlify</a>
-11. <a href="https://www.netlify.com/blog/beginners-guide-to-composable-architecture/" rel="noopener noreferrer" target="_blank">A Beginner's Guide to Composable Architecture - Article by Netlify</a>
+10. <a href="https://www.netlify.com/guide-to-composable-architecture/" rel="noopener noreferrer" target="_blank">Guide to Composable Architecture - Article on Netlify</a>
+11. <a href="https://www.netlify.com/blog/beginners-guide-to-composable-architecture/" rel="noopener noreferrer" target="_blank">A Beginner's Guide to Composable Architecture - Article on Netlify</a>
 12. <a href="https://www.netlify.com/blog/tags/composable-architecture/" rel="noopener noreferrer" target="_blank">Composable Architecture - Blog Posts by Netlify</a>
 13. <a href="https://atomicdesign.bradfrost.com/" rel="noopener noreferrer" target="_blank">Atomic Design - Book by Brad Frost</a>
 14. <a href="https://microfrontend.dev/" rel="noopener noreferrer" target="_blank">Micro Frontends and Composable Frontends Architectures - Handbook by Natalia Venditto</a>
@@ -345,7 +351,7 @@ The Composable Frontend Architecture is built upon the Jamstack Architecture, wh
 17. <a href="https://en.m.wikipedia.org/wiki/Headless_software" rel="noopener noreferrer" target="_blank">Headless Software - Wikipedia</a>
 18. <a href="https://headlessui.com/" rel="noopener noreferrer" target="_blank">Headless UI - Library of Accessible and Unstyled UI Components</a>
 19. <a href="https://nextjs.org/docs/pages/building-your-application/rendering" rel="noopener noreferrer" target="_blank">Rendering - Documentation by Next.js</a>
-20. <a href="https://www.netlify.com/blog/2021/04/14/distributed-persistent-rendering-a-new-jamstack-approach-for-faster-builds/" rel="noopener noreferrer" target="_blank">Distributed Persistent Rendering: A new Jamstack approach for faster builds - Article by Netlify</a>
+20. <a href="https://www.netlify.com/blog/2021/04/14/distributed-persistent-rendering-a-new-jamstack-approach-for-faster-builds/" rel="noopener noreferrer" target="_blank">Distributed Persistent Rendering: A new Jamstack approach for faster builds - Article on Netlify</a>
 21. <a href="https://nextjs.org/docs/pages/building-your-application/data-fetching/incremental-static-regeneration" rel="noopener noreferrer" target="_blank">Incremental Static Regeneration (ISR) - Next.js Docs</a>
 22. <a href="https://daverupert.com/2024/02/ui-states/" rel="noopener noreferrer" target="_blank">UI=f(states^n) - Article by Dave Rupert</a>
 23. <a href="https://www.patterns.dev/vanilla/islands-architecture/" rel="noopener noreferrer" target="_blank">Islands Architecture - Article on patterns.dev</a>
@@ -361,4 +367,5 @@ The Composable Frontend Architecture is built upon the Jamstack Architecture, wh
 33. <a href="https://mia-platform.eu/blog/composable-frontend/" rel="noopener noreferrer" target="_blank">Enhance your Composable Frontend Architecture with Micro-Frontends - Commercial Article on Mia Platform</a>
 34. <a href="https://blog.bitsrc.io/composable-frontend-architecture-for-2024-562f309efe43" rel="noopener noreferrer" target="_blank">Composable Frontend Architecture for 2024 - Medium</a>
 35. <a href="https://alokai.com/blog/composable-architecture" rel="noopener noreferrer" target="_blank">What is Composable Architecture? - Commercial Article on Alokai</a>
-36. <a href="https://www.netlify.com/blog/how-we-run-nextjs/" rel="noopener noreferrer" target="_blank">How we run Next.js today — and what should change - Article by Netlify</a>
+36. <a href="https://www.netlify.com/blog/how-we-run-nextjs/" rel="noopener noreferrer" target="_blank">How we run Next.js today — and what should change - Article on Netlify</a>
+37. <a href="https://codetv.dev/blog/wtf-is-jamstack" rel="noopener noreferrer" target="_blank">WTF is the Jamstack? A goofy name for a great web architecture. - Article on Code TV</a>
