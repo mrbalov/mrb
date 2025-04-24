@@ -177,11 +177,17 @@ The context-aware dynamic content is a tricky thing. My recommendation is to con
 
 This is a Jamstack approach to managing zero-downtime deploys. As the term suggests, deploys are arranged with deployable atoms — stateless, immutable, and self-contained artifacts. Self-contained means that every deployable atom contains everything required for the service runtime: code, assets, configurations, and even pipelines (e.g., for GitHub Actions).
 
-[pic - atomic deploys]
+<figure>
+  <img
+    src="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/atomic-deploys--large.webp"
+    alt="Diagram: Atomic Deployse."
+  >
+  <figcaption>Atomic Deploys.</figcaption>
+</figure>
 
 Atomic deploys are based on the <a href="https://www.linkedin.com/pulse/immutable-revolution-embracing-artifact-based-models-robert-jackson-h5kpc?utm_source=share&utm_medium=member_ios&utm_campaign=share_via" rel="noopener noreferrer" target="_blank">Artifact-Based Deployment</a> concept. [27] The main idea is to have a registry of self-contained deliverables that may be easily switched in different environments with no downtime. In my experience, it works well with <a href="https://trunkbaseddevelopment.com/" rel="noopener noreferrer" target="_blank">Trunk Based Development</a>. [28]
 
-Atomic deploys are an integral part of the Composable Frontend architecture. They allow quick experiments and short feedback cycles with minimal risks, allowing you to quickly revert the code that doesn't work expectedly. At the same time, they make Micro Frontends and independent deployments more manageable.
+Atomic deploys are an integral part of the Composable Frontend Architecture. They allow quick experiments and short feedback cycles with minimal risks, allowing you to quickly revert the code that doesn't work expectedly. At the same time, they make Micro Frontends and independent deployments more manageable.
 
 ### Headless Data Providers
 
@@ -189,7 +195,7 @@ Headless architecture has become a buzzword. This is one more concept that is ov
 
 As the term implies, “headless” means that something misses its head/face — i.e., it misses its view/presentation. In terms of data providers, it means that “headless data provider” does not have a graphical user interface — it’s responsible only for managing its data, and is not concerned about how they are presented to end users (it’s a responsibility of some other service, that we are not interested in at this level). This is how the term “Headless CMS” emerged, meaning that the content is separated from how it is rendered to end users.
 
-As we have already seen before, this concept was also broken by popular some time ago architectural patterns like MVC. The main benefit of such patterns is in their simplicity, and for some cases they still may be suitable. However, within the Composable Frontend architecture, it makes sense to consider mixing data and its presentation in a single application like in MVC an anti-pattern — it contradicts the Jamstack principles at least.
+As we have already seen before, this concept was also broken by popular some time ago architectural patterns like MVC. The main benefit of such patterns is in their simplicity, and for some cases they still may be suitable. However, within the Composable Frontend Architecture, it makes sense to consider mixing data and its presentation in a single application like in MVC an anti-pattern — it contradicts the Jamstack principles at least.
 
 It’s hard to imagine Composable Frontend without headless data providers. They provide a number of benefits that make them a good choice:
 
@@ -197,7 +203,13 @@ It’s hard to imagine Composable Frontend without headless data providers. They
 - Services separation (content providers and content consumers). Having independent services for different purposes makes a system more reliable (e.g., downtime of some content consumer does not affect the content provider) and secure (e.g., in a <a href="https://en.wikipedia.org/wiki/Zero_trust_architecture" rel="noopener noreferrer" target="_blank">Zero-Trust Architecture</a> [29], every service is protected which makes the whole system more secure).
 - Headless data providers may be consumed by different consumers. E.g., in an enterprise-level application, for the same data provider there may be several consumers with different purposes — data presentation, data transformation, and so on.
 
-[pic - headless data providers]
+<figure>
+  <img
+    src="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/headless-cms--large.webp"
+    alt="Diagram: Headless CMS."
+  >
+  <figcaption>Headless CMS.</figcaption>
+</figure>
 
 ## The Power of Composable Frontend
 
