@@ -217,32 +217,48 @@ The Composable Frontend brings your team the power of building new features from
 
 In a classical software development, when there is a new feature request, there are the following simplified loop that teams usually step into:
 
-1. **Requirements gathering.** At this step, you work with a feature requester closely to gather as much information as possible to understand what must be implemented.
-2. **Requirements refinement.** The request must be verified with the technical team. As the technical team knows the system well from the code perspective, they may imagine how the new feature may be implemented, what is required for the implementation, and how much it may cost. During this step, you can recognize technical blockers, that must be communicated to the feature requester back.
+1. **Requirements Gathering.** At this step, you work with a feature requester closely to gather as much information as possible to understand what must be implemented.
+2. **Requirements Refinement.** The request must be verified with the technical team. As the technical team knows the system well from the code perspective, they may imagine how the new feature may be implemented, what is required for the implementation, and how much it may cost. During this step, you can recognize technical blockers, that must be communicated to the feature requester back. You may want to arrange POC at this stage to verify the hypothesis and return to the first step in case of failure.
 3. **Implementation.** The technical team does a magic with the code to make the feature request a reality. Some code is reused, some new code is implemented from scratch. Probably, during the implementation, the team may decide to use some open-source libraries.
 4. **Deployment.** Once the code is ready, it is time to deploy it to make visible to stakeholders. Once it happens, everyone with an access can review the new feature.
-5. **QA and Feedback Gathering.** Once the code is deployed, it is time to test the implementation and gather feedback from the team. It may initiate a new loop of the development cycle to improve the feature.
+5. **QA and Feedback Gathering.** Once the code is deployed, it is time to test the implementation and gather feedback from the team. The feature demo makes sense at this stage. It may initiate a new loop of the development cycle to improve the feature.
 
 <figure>
   <img
-    src="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/classical-development-cycle-simplified--large.webp"
+    src="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/development-cycle-classical-simplified--large.webp"
     alt="Diagram: Classical Development Cycle (Simplified)."
   >
   <figcaption>Classical Development Cycle (Simplified).</figcaption>
 </figure>
 
-As you can see, with the classical approach, the new feature development (e.g., introducing a new web page) is mostly about working with the code. With the Composable Frontend, the development cycle looks a bit different, shifting the step about new code creation towards content management:
+As you can see, with the classical approach, the new feature development (e.g., introducing a new web page) is mostly about working with the code. With the Composable Frontend Architecture, the development cycle looks a bit different, shifting the step about new code creation towards content management:
 
-1. **Requirements gathering.** Nothing special, everything stays as it was.
-2. **Requirements refinement.** The difference starts from how the technical team thinks about the new feature implementation. With the classical approach, a technical person may first think about how he/she can reuse the existing code/module, and then decide on what new code (probably, a new module) must be introduced to satisfy the requirements. With the Composable Frontend, the technical person starts thinking about the new feature in terms of reusable UI components (i.e., “bricks” or “building blocks”) that can be put together to satisfy the requirements; and only after that it may require thinking about what new “bricks” must be introduced, and what code development is required for that.
-3. **Implementation.** With the Composable Frontend, the implementation doesn’t always mean that you must write a new code and deploy it somewhere. In some cases, you may reuse already existing bricks, and the feature request can be addressed with configuration activities. E.g., if the request is about introducing a new page, that is based on the already implemented design system (consisting of atoms and molecules, I.e., bricks), you can combine these bricks in a proper way to make the new page work as requested.
+1. **Requirements Gathering.** Nothing special, everything stays as it was.
+2. **Requirements Refinement.** The difference starts from how the technical team thinks about the new feature implementation. With the classical approach, a technical person may first think about how he/she can reuse the existing code/module, and then decide on what new code (probably, a new module) must be introduced to satisfy the requirements. With the Composable Frontend, the technical person starts thinking about the new feature in terms of reusable UI components (i.e., “bricks” or “building blocks”) that can be put together to satisfy the requirements; and only after that it may require thinking about what new “bricks” must be introduced, and what code development is required for that. You may want to arrange POC at this stage to verify the hypothesis and return to the first step in case of failure; the Composable Frontend may simplify the POC due to the possibility of runtime experiments.
+3. **Implementation.** With the Composable Frontend, the implementation doesn’t always mean that you must write a new code and deploy it somewhere. In some cases, you may reuse already existing bricks, and the feature request can be addressed with configuration activities. E.g., if the request is about introducing a new page, that is based on the already implemented design system (consisting of atoms and molecules, i.e., bricks), you can combine these bricks in a proper way to make the new page work as requested.
 4. **Deployment.** The difference is in how the feature is implemented. If it requires development on the code level, there are no significant differences. However, if the feature is implemented from already existing bricks, the deployment happens automatically because of properly implemented CI/CD pipelines.
+stakeholders. Once it happens, everyone with an access can review the new feature.
+5. **QA and Feedback Gathering.** Nothing special, everything stays as it was.
 
-[pic - Composable frontend development cycle]
+<figure>
+  <img
+    src="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/development-cycle-with-composable-frontend-simplified--large.webp"
+    alt="Diagram: Development Cycle with Composable Frontend (Simplified)."
+  >
+  <figcaption>Development Cycle with Composable Frontend (Simplified).</figcaption>
+</figure>
 
 Definitely, it’s a simplified model. As the Composable Frontend is more complex by its nature than the classical development style based on the coding, it introduces some overhead around DevOps: bricks must be developed and tested independently, it leads to more complex deployments, and is multiplied by the need for automatic releases and on-demand cache invalidation. (However, if you base your system on a platform like Commercetools Frontend, the complexity of deployments may be hidden from you.)
 
 > The more flexibility you want, the more complexity it brings.
+
+| Development Cycle Step    | Classical Development Cycle                      | Development Cycle with Composable Frontend                         |
+|---------------------------|--------------------------------------------------|--------------------------------------------------------------------|
+| Requirements Gathering    | Communication                                    | Communication                                                      |
+| Requirements Refinement   | Communication<br>POC for Code<br>POC for Content | Communication<br>POC for Code<br>POC for Bricks<br>POC for Content |
+| Implementation            | Code<br>Content                                  | Code<br>Content<br>Bricks                                          |
+| Deployment                | Manual or Automatic Code Deployment              | Manual or Automatic Code Deployment<br>Automatic Bricks Deployment |
+| QA and Feedback Gathering | QA<br>Demo<br>Feedback                           | QA<br>Demo<br>Feedback                                             |
 
 ## The Power of Domain-Oriented Teams
 
@@ -250,7 +266,15 @@ The Composable Frontend enables domain-oriented teams. In my opinion, it looks l
 
 Comparing to Micro Frontends, the granularity of isolated UI elements in the Composable Frontend is higher. With Micro Frontends, a domain-oriented team may own an end-to-end business feature that is already glued into a seamless application (considering the generic architecture, in some Micro Frontends implementations, such features may have dedicated URLs).
 
-With the Composable Frontend, a domain-oriented team owns a set of bricks that still must be glued together in the runtime (the foundation for this is the pages/features configuration that may be exposed to business actors like content managers). I.e., Micro Frontends are usually glued into an application during the build time, and composable bricks are glued in the runtime.
+With the Composable Frontend, a domain-oriented team owns a set of bricks that still must be glued together in the runtime (the foundation for this is the pages/features configuration/structure that may be exposed to business actors like content managers). I.e., Micro Frontends are usually glued into an application during the build time, and composable bricks are glued in the runtime.
+
+<figure>
+  <img
+    src="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/how-micro-frontends-are-glued--large.webp"
+    alt="Diagram: How Micro Frontends are Glued."
+  >
+  <figcaption>How Micro Frontends are Glued.</figcaption>
+</figure>
 
 [pic - how Micro frontends and composable bricks are glued]
 
