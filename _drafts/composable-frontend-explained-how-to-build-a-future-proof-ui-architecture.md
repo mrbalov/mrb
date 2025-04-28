@@ -276,7 +276,13 @@ With the Composable Frontend, a domain-oriented team owns a set of bricks that s
   <figcaption>How Micro Frontends are Glued.</figcaption>
 </figure>
 
-[pic - how Micro frontends and composable bricks are glued]
+<figure>
+  <img
+    src="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/how-composable-frontend-bricks-are-glued--large.webp"
+    alt="Diagram: How Composable Frontend Bricks are Glued."
+  >
+  <figcaption>How Composable Frontend Bricks are Glued.</figcaption>
+</figure>
 
 Both Micro Frontends and Composable Frontend (that is based on Composable Architecture) are architectural styles. They don’t conflict and may be used together. E.g., the corporation may own a number of micro frontends implemented independently and with different approaches: classical monolithic web applications, modular frontends, composable frontends, static landing pages, and so on. This mixed nature is fine for Micro Frontends Architecture, and it doesn’t block us from integrating all of these sub-systems into a single and seamless one.
 
