@@ -9,7 +9,7 @@ excerpt: A deep dive into the Composable Frontend Architecture — its principle
 image: /assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/cover.webp
 image_alt: Cover - Abstract Vision on the Composable Frontend Architecture by DALL-E AI.
 image_caption: Illustration by <a href="https://openai.com/index/dall-e-3/" rel="noopener noreferrer" target="_blank">DALL-E</a>
-tweet: 1877834515722244480
+tweet: 1920193269134160188
 toc: true
 ---
 
