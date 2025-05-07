@@ -15,13 +15,13 @@ toc: true
 
 ## TL;DR
 
-- Composable Frontend (CF) is an architectural style that enables high flexibility.
-- CF promotes building graphical user interfaces from small, independent and reusable building blocks, like Lego.
-- CF is complex and expensive.
-- Jamstack (Static-Site Generation, Atomic Deploys, Headless Data Providers) makes the foundation for CF.
-- When integrating CF with Domain-Oriented Solutions (like Micro-Frontends Architecture), better flexibility (and even higher complexity) becomes possible.
-- There are ready-to-use CF solutions from the market that may help you get a quick start.
-- CF is possible to implement from scratch and not use commercial solutions from the market.
+- Composable Frontend (<abbr title="Composable Frontend">CF</abbr>) is an architectural style that enables high flexibility.
+- <abbr title="Composable Frontend">CF</abbr> promotes building graphical user interfaces from small, independent and reusable building blocks, like Lego.
+- <abbr title="Composable Frontend">CF</abbr> is complex and expensive.
+- Jamstack (Static-Site Generation, Atomic Deploys, Headless Data Providers) makes the foundation for <abbr title="Composable Frontend">CF</abbr>.
+- When integrating <abbr title="Composable Frontend">CF</abbr> with Domain-Oriented Solutions (like Micro-Frontends Architecture), better flexibility (and even higher complexity) becomes possible.
+- There are ready-to-use <abbr title="Composable Frontend">CF</abbr> solutions from the market that may help you get a quick start.
+- <abbr title="Composable Frontend">CF</abbr> is possible to implement from scratch and not use commercial solutions from the market.
 
 ## Foreword
 
@@ -29,7 +29,7 @@ When talking about software architectures, we usually talk about backends. Due t
 
 Fortunately, we started hearing about frontend architectures recently: Monolithic Frontend, <a href="https://shopify.engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity" rel="noopener noreferrer" target="_blank">Modular Monolithic Frontend</a> [<sup>6</sup>](#references), <a href="https://micro-frontends.org/" rel="noopener noreferrer" target="_blank">Micro Frontends</a> [<sup>3</sup>](#references)[<sup>7</sup>](#references), Composable Frontend, and others. This trend is a token of modern frontends complexity.
 
-Composable Frontend is a contemporary approach to building highly flexible systems. There is a lot of hype around this concept today, and a regular technical guy may consider it as a new marketing campaign aimed at earning more money for corporations. From some perspective, this is true: think about the MACH Alliance, which big tech companies founded to promote their products. On another shore, there’s a <a href="https://jamstack.org/" rel="noopener noreferrer" target="_blank">Jamstack</a> [<sup>5</sup>](#references) whose main purpose is to promote architecture rather than specific products.
+Composable Frontend is a contemporary approach to building highly flexible systems. There is a lot of hype around this concept today, and a regular technical guy may consider it as a new marketing campaign aimed at earning more money for corporations. From some perspective, this is true: think about the <abbr title="Microservices, API-First, Cloud-Native, Headless">MACH</abbr> Alliance, which big tech companies founded to promote their products. On another shore, there’s a <a href="https://jamstack.org/" rel="noopener noreferrer" target="_blank">Jamstack</a> [<sup>5</sup>](#references) whose main purpose is to promote architecture rather than specific products.
 
 When googling “Composable Architecture”, there is a plethora of low-quality search results that are all about marketing. Preparing for this paper, I have reviewed tons of them — you can find some smirky comments about them in my X. I added some of them as references to this paper intentionally, as they may play a good role for understanding the market.
 
@@ -70,7 +70,7 @@ There is the following terminology around what the article is built on. Please, 
 9. **<a href="https://nextjs.org/docs/pages/building-your-application/rendering" rel="noopener noreferrer" target="_blank">SSR</a>** [<sup>19</sup>](#references) stands for Server-Side Rendering and means the rendering of a website’s HTML on a server rather than a client.
 10. **<a href="https://www.netlify.com/blog/2021/04/14/distributed-persistent-rendering-a-new-jamstack-approach-for-faster-builds/" rel="noopener noreferrer" target="_blank">DPR</a>** [<sup>20</sup>](#references) stands for Distributed Persistent Rendering and means rendering web content on-demand (once it is requested) and spreading it in a geographically distributed manner. Invented by Netlify and based on Edge Networks.
 11. **<a href="https://nextjs.org/docs/pages/building-your-application/data-fetching/incremental-static-regeneration" rel="noopener noreferrer" target="_blank">ISR</a>** [<sup>21</sup>](#references) stands for Incremental Static Regeneration and means re-rendering static content with some time interval. It’s a killer-feature of <a href="https://nextjs.org/" rel="noopener noreferrer" target="_blank">Next.js</a>. In combination with Netlify, it is based on CDN (unfortunately, not on the ODB and Edge Networks, at times when I was writing this article).
-12. **<a href="https://machalliance.org/" rel="noopener noreferrer" target="_blank">MACH</a>** [<sup>9</sup>](#references) stands for Microservices, API-First, Cloud-Native, and Headless. It forms an architectural style that is promoted by the MACH Alliance, that is a group of commercial products.
+12. **<a href="https://machalliance.org/" rel="noopener noreferrer" target="_blank"><abbr title="Microservices, API-First, Cloud-Native, Headless">MACH</abbr></a>** [<sup>9</sup>](#references) stands for Microservices, API-First, Cloud-Native, and Headless. It forms an architectural style that is promoted by the <abbr title="Microservices, API-First, Cloud-Native, Headless">MACH</abbr> Alliance, that is a group of commercial products.
 13. **Brick** in this article means a reusable UI element that is isolated from other functionality. Nowadays, there is no universal term for this, and you may face different naming in different ready-to-use technical solutions (e.g., in Commercetools Frontend, the reusable and isolated UI element is called “tastic”). To avoid sticking to commercial products, I decided to invent a universal term pointing to the generic architectural approach. The term is based on the Lego example, that gives you enough flexibility to build literally anything from elements with a universal interface (i.e., bricks).
 
 ## The Rise of Jamstack
@@ -288,8 +288,6 @@ Both Micro Frontends and Composable Frontend (that is based on Composable Archit
 
 With Micro Frontends, you can mix UI frameworks (like, Next.js for a Blog, and Angular for an Admin Room). The same blending is not easily possible with the Composable Frontend unless different Composable Frontends are arranged as different Micro Frontends and compiled independently.
 
-[pic - Micro frontends and composable frontend programming languages]
-
 The Micro Frontends Architecture is a separate topic, and <a href="https://microfrontend.dev/" rel="noopener noreferrer" target="_blank">Micro Frontends and Composable Frontend Architectures</a> [<sup>14</sup>](#references) is a good resource for diving deeper into this topic.
 
 It is worth noting that the full potential of bricks may be implemented only with the maximum level of isolation (same as with Microservices).
@@ -302,8 +300,6 @@ In reality, the full isolation is never possible. Probably, you will want to sha
 - **Design System (DS).** It is a set of core (kit) UI components usually represented as Atoms (in terms of the <a href="https://atomicdesign.bradfrost.com/" rel="noopener noreferrer" target="_blank">Atomic Design</a> [<sup>13</sup>](#references)). It makes no sense to support several Design Systems, incapsulated inside domain-oriented teams. In some cases, the Design System may be taken from the web: Material UI, Ant Design, and others. The corner case is when different business features depend on different Design Systems.
 - **BFF (Backend for Frontend).** It makes sense to have a single entry point into backends for all the bricks and domain-oriented teams. It differentiates the Composable Frontend from Microservices, which depend on data storage isolation heavily. However, you are not limited technically and may achieve the data isolation for domain-oriented teams, but not for bricks. For instance, you may want to support BFFs dedicated to domains.
 
-[pic - what to share between domains safely]
-
 ## The Complexity of Putting Everything Together
 
 There are a lot of complex topics under the hood of the Composable Frontend. Putting everything together leads to the steep learning curve for technical and business teams. As with exotic programming languages like Rust, you will struggle hiring engineers from the market ready-to-go with the Composable Frontend. It looks more sensible to gradually teach your teams and learn from your mistakes. (Like we do on projects I participate in.)
@@ -313,8 +309,6 @@ To mitigate the complexity of the Composable Frontend, you may consider followin
 - **Divide & Conquer.** The Composable Frontend is possible to be hidden from regular engineers. I.e., when a junior frontend developer implements a Product Gallery UI component, the Composable Frontend must not concern her/him. The integration of bricks may be dedicated to a separate team/member responsible for the “composability” of the frontend.
 - **Modularization.** It’s so hard to implement the “Divide & Conquer” model when module boundaries are not  clearly defined. It is a regular problem for monolithic codebases where engineers can import everything from everywhere into their pieces of code and merge such a code successfully without a thorough code review. The best option to fight with this problem is DDD and modularization: when modules are hardly separated from each other, the team has no more options rather than supporting the desired separation of things. (In my experience, a monorepository was always a good decision to split things with minimal overhead.) Also, you can consider implementing something like a <a href="https://github.com/feature-sliced/documentation" rel="noopener noreferrer" target="_blank">Feature-Sliced Design</a> [<sup>32</sup>](#references).
 - **Evolution vs Revolution.** The world is not ideal, and there are no ideal solutions. Try to arrange the evolutionary culture and never try to introduce ideal solutions. For instance, don’t hurry up decomposing a monolith into modules: firstly, outline the module boundaries; secondly, spend some time with a virtual module kept as a part of a monolith, and only then arrange it as a separate module. Doing the same in the revolutionary mode, you may introduce problems for engineering teams, banging them with breaking improvements.
-
-[pic - how to mitigate the CF complexity]
 
 ## Composable Frontend in Action
 
@@ -389,7 +383,7 @@ The Composable Frontend Architecture is built upon the Jamstack Architecture, wh
 6. <a href="https://shopify.engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity" rel="noopener noreferrer" target="_blank">Deconstructing the Monolith: Designing the Software that Maximizes Developer Productivity - Article by Kirsten Westeinde from Shopify about Modular Monolith</a>
 7. <a href="https://www.amazon.com/Micro-Frontends-Action-Michael-Geers/dp/1617296872" rel="noopener noreferrer" target="_blank">Micro Frontends in Action - Book by Michael Geers on Amazon</a>
 8. <a href="https://martinfowler.com/articles/injection.html" rel="noopener noreferrer" target="_blank">Inversion of Control Containers and the Dependency Injection Pattern - Article by Martin Fowler</a>
-9. <a href="https://machalliance.org/" rel="noopener noreferrer" target="_blank">MACH Alliance</a>
+9. <a href="https://machalliance.org/" rel="noopener noreferrer" target="_blank"><abbr title="Microservices, API-First, Cloud-Native, Headless">MACH</abbr> Alliance</a>
 10. <a href="https://www.netlify.com/guide-to-composable-architecture/" rel="noopener noreferrer" target="_blank">Guide to Composable Architecture - Article on Netlify</a>
 11. <a href="https://www.netlify.com/blog/beginners-guide-to-composable-architecture/" rel="noopener noreferrer" target="_blank">A Beginner's Guide to Composable Architecture - Article on Netlify</a>
 12. <a href="https://www.netlify.com/blog/tags/composable-architecture/" rel="noopener noreferrer" target="_blank">Composable Architecture - Blog Posts by Netlify</a>
