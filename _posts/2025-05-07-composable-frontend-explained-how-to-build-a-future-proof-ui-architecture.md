@@ -195,11 +195,11 @@ Headless architecture has become a buzzword. This is one more concept that is ov
 
 As the term implies, “headless” means that something misses its head/face — i.e., it misses its view/presentation. In terms of data providers, it means that “headless data provider” does not have a graphical user interface — it’s responsible only for managing its data, and is not concerned about how they are presented to end users (it’s a responsibility of some other service, that we are not interested in at this level). This is how the term “Headless <abbr title="Content Management System">CMS</abbr>” emerged, meaning that the content is separated from how it is rendered to end users.
 
-As we have already seen before, this concept was also broken by popular some time ago architectural patterns like <abbr title="Model, View, Controller">MVC</abbr>. The main benefit of such patterns is in their simplicity, and for some cases they still may be suitable. However, within the Composable Frontend Architecture, it makes sense to consider mixing data and its presentation in a single application like in <abbr title="Model, View, Controller">MVC</abbr> an anti-pattern — it contradicts the <abbr title="JavaScript, APIs, Markup">Jamstack</abbr> principles at least.
+As we have already seen before, this concept was also broken by popular some time ago architectural patterns like <abbr title="Model, View, Controller">MVC</abbr>. The main benefit of such patterns is in their simplicity, and in some cases, they may still be suitable. However, within the Composable Frontend Architecture, it makes sense to consider mixing data and its presentation in a single application like in <abbr title="Model, View, Controller">MVC</abbr> an anti-pattern — it contradicts the <abbr title="JavaScript, APIs, Markup">Jamstack</abbr> principles at least.
 
-It’s hard to imagine Composable Frontend without headless data providers. They provide a number of benefits that make them a good choice:
+It’s hard to imagine a Composable Frontend without headless data providers. They provide several benefits that make them a good choice:
 
-- Business domains separation (content management and data presentation). Good for independent and parallel work of different organizational departments responsible for content and graphical user interfaces.
+- Business domains separation (content management and data presentation). Good for the independent and parallel work of different organizational departments responsible for content and graphical user interfaces.
 - Services separation (content providers and content consumers). Having independent services for different purposes makes a system more reliable (e.g., downtime of some content consumer does not affect the content provider) and secure (e.g., in a <a href="https://en.wikipedia.org/wiki/Zero_trust_architecture" rel="noopener noreferrer" target="_blank">Zero-Trust Architecture</a> [<sup>29</sup>](#references), every service is protected which makes the whole system more secure).
 - Headless data providers may be consumed by different consumers. E.g., in an enterprise-level application, for the same data provider there may be several consumers with different purposes — data presentation, data transformation, and so on.
 
@@ -215,7 +215,7 @@ It’s hard to imagine Composable Frontend without headless data providers. They
 
 The Composable Frontend brings your team the power of building new features from reusable software bricks, like you do with Lego.
 
-In a classical software development, when there is a new feature request, there are the following simplified loop that teams usually step into:
+In a classical software development, when there is a new feature request, there is the following simplified loop that teams usually step into:
 
 1. **Requirements Gathering.** At this step, you work with a feature requester closely to gather as much information as possible to understand what must be implemented.
 2. **Requirements Refinement.** The request must be verified with the technical team. As the technical team knows the system well from the code perspective, they may imagine how the new feature may be implemented, what is required for the implementation, and how much it may cost. During this step, you can recognize technical blockers, that must be communicated to the feature requester back. You may want to arrange <abbr title="Proof of Concept">POC</abbr> at this stage to verify the hypothesis and return to the first step in case of failure.
