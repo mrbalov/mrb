@@ -2,7 +2,7 @@
 layout: post
 title: "Composable Frontend Explained: How to Build a Future-Proof UI Architecture"
 date: 2025-05-07 12:00:00 +02:00
-modified: 2025-05-07 12:00:00 +02:00
+modified: 2025-05-08 12:00:00 +02:00
 tags: [architecture, frontend]
 description: A deep dive into the Composable Frontend Architecture — its principles, advantages, and how it empowers teams to create adaptable digital experiences.
 excerpt: A deep dive into the Composable Frontend Architecture — its principles, advantages, and how it empowers teams to create adaptable digital experiences.
@@ -19,7 +19,7 @@ toc: true
 - <abbr title="Composable Frontend">CF</abbr> promotes building graphical user interfaces from small, independent and reusable building blocks, like Lego.
 - <abbr title="Composable Frontend">CF</abbr> is complex and expensive.
 - <abbr title="JavaScript, APIs, Markup">Jamstack</abbr> (Static-Site Generation, Atomic Deploys, Headless Data Providers) makes the foundation for <abbr title="Composable Frontend">CF</abbr>.
-- When integrating <abbr title="Composable Frontend">CF</abbr> with Domain-Oriented Solutions (like Micro-Frontends Architecture), better flexibility (and even higher complexity) becomes possible.
+- When integrating <abbr title="Composable Frontend">CF</abbr> with Domain-Oriented Solutions (like Micro Frontends Architecture), better flexibility (and even higher complexity) becomes possible.
 - There are ready-to-use <abbr title="Composable Frontend">CF</abbr> solutions from the market that may help you get a quick start.
 - <abbr title="Composable Frontend">CF</abbr> is possible to implement from scratch and not use commercial solutions from the market.
 
