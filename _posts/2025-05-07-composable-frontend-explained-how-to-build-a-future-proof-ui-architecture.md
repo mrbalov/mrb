@@ -367,7 +367,7 @@ On the other hand, the Composable Frontend (and the Composable Architecture in g
 
 There are ready-to-go solutions from the market, that allow to start with the Composable Frontend quickly. However, if you need something unique, you can implement this architecture yourself, growing your own Composable Frontend Engine.
 
-The Composable Frontend Architecture is built upon the <abbr title="JavaScript, APIs, Markup">Jamstack</abbr> Architecture, which promotes cutting-edge techniques like Static-Site Generation, Atomic Deploys, and Headless Data Providers. When integrating it with Domain-Oriented Solutions (which is possible with Micro-Frontends Architecture), you can achieve even more flexibility and parallel development in enterprises.
+The Composable Frontend Architecture is built upon the <abbr title="JavaScript, APIs, Markup">Jamstack</abbr> Architecture, which promotes cutting-edge techniques like Static-Site Generation, Atomic Deploys, and Headless Data Providers. When integrating it with Domain-Oriented Solutions (which is possible with Micro Frontends Architecture), you can achieve even more flexibility and parallel development in enterprises.
 
 > The Composable Frontend Architecture is a strong thing that enables high flexibility. However, it costs.
 
