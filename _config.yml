@@ -5,8 +5,8 @@ lang: en-US
 timezone: Europe/Kyiv
 og_image: assets/img/ogp-global.webp
 mode: dark
-url: https://mrbtech.netlify.app
-baseurl:
+url: https://balov.dev
+baseurl: https://balov.dev
 permalink: /:title/
 google_analytics:
 fb_appid:
@@ -16,10 +16,10 @@ author:
   bio: >-
     Making the world better by talking about complex software engineering topics in simple words.
   username: Mr. B.
-  github: balovbohdan
+  github: mrbalov
   x: mrbalov
   facebook: facebook_username
-  linkedin: bohdan-balov
+  linkedin: mrbalov
   email: your-email@email.com
   avatar: /assets/img/avatar.webp
 
