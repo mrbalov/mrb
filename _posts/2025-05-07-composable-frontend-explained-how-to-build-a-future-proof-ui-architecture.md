@@ -2,7 +2,7 @@
 layout: post
 title: "Composable Frontend Explained: How to Build a Future-Proof UI Architecture"
 date: 2025-05-07 12:00:00 +02:00
-modified: 2025-05-08 12:00:00 +02:00
+modified: 2025-05-09 12:00:00 +02:00
 tags: [architecture, frontend]
 description: A deep dive into the Composable Frontend Architecture — its principles, advantages, and how it empowers teams to create adaptable digital experiences.
 excerpt: A deep dive into the Composable Frontend Architecture — its principles, advantages, and how it empowers teams to create adaptable digital experiences.
@@ -236,8 +236,7 @@ As you can see, with the classical approach, the new feature development (e.g., 
 1. **Requirements Gathering.** Nothing special, everything stays as it was.
 2. **Requirements Refinement.** The difference starts from how the technical team thinks about the new feature implementation. With the classical approach, a technical person may first think about how he/she can reuse the existing code/module, and then decide on what new code (probably, a new module) must be introduced to satisfy the requirements. With the Composable Frontend, the technical person starts thinking about the new feature in terms of reusable <abbr title="User Interface">UI</abbr> components (i.e., “bricks” or “building blocks”) that can be put together to satisfy the requirements; and only after that it may require thinking about what new “bricks” must be introduced, and what code development is required for that. You may want to arrange <abbr title="Proof of Concept">POC</abbr> at this stage to verify the hypothesis and return to the first step in case of failure; the Composable Frontend may simplify the <abbr title="Proof of Concept">POC</abbr> due to the possibility of runtime experiments.
 3. **Implementation.** With the Composable Frontend, the implementation doesn’t always mean that you must write a new code and deploy it somewhere. In some cases, you may reuse already existing bricks, and the feature request can be addressed with configuration activities. E.g., if the request is about introducing a new page, that is based on the already implemented design system (consisting of atoms and molecules, i.e., bricks), you can combine these bricks in a proper way to make the new page work as requested.
-4. **Deployment.** The difference is in how the feature is implemented. If it requires development on the code level, there are no significant differences. However, if the feature is implemented from already existing bricks, the deployment happens automatically because of properly implemented <abbr title="Continuous Integration">CI</abbr>/<abbr title="Continuous Delivery/Deployment">CD</abbr> pipelines.
-stakeholders. Once it happens, everyone with an access can review the new feature.
+4. **Deployment.** The difference is in how the feature is implemented. If it requires development on the code level, there are no significant differences. However, if the feature is implemented from already existing bricks, the deployment happens automatically because of properly implemented <abbr title="Continuous Integration">CI</abbr>/<abbr title="Continuous Delivery/Deployment">CD</abbr> pipelines. Once it happens, everyone with an access can review the new feature.
 5. **<abbr title="Quality Assurance">QA</abbr> and Feedback Gathering.** Nothing special, everything stays as it was.
 
 <figure>
