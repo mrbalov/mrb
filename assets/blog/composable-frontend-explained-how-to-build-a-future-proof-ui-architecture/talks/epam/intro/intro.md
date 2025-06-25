@@ -50,3 +50,11 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 ---
 
 ![bg fit brightness:0.8](../../../how-composable-frontend-bricks-are-glued--large.webp)
+
+---
+
+# Jamstack
+
+- JS, APIs, Markup.
+- Decouples UI from business logic.
+- SSG, Atomic Deploys, Headless.
