@@ -6,7 +6,7 @@ class: invert
 
 # COMPOSABLE FRONTEND
 
-![bg right fill brightness:0.9](./cover.png)
+![bg right fill brightness:0.8](./cover.png)
 
 In detail.
 
@@ -44,6 +44,8 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 # MICRO FRONTENDS
 
+![bg right fill brightness:0.8](./mf.png)
+
 - Enable even more flexibility.
 - Add an additional complexity.
 - Align well with DDD. [↗](https://balov.dev/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/#the-power-of-domain-oriented-teams)
@@ -61,12 +63,24 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 # JAMSTACK
 
+![bg right fill brightness:0.8](./jamstack.png)
+
 - JS, APIs, Markup.
 - Decouples UI from business logic.
 - SSG, Atomic Deploys, Headless.
 
-TODO generate image
+---
 
-# ATOMIC DEPLOYS
+# ATOMIC DEPLOYS [↗](https://balov.dev/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/#atomic-deploys)
 
-- todo
+![bg right fill brightness:0.8](./atomic-deploys.png)
+
+- Zero-downtime releases.
+- Immutable and self-contained builds.
+- Resemble the blue-green deployment.
+- Allow quick experiments.
+- Work well with Trunk Based Development.
+
+---
+
+![bg fit brightness:1](../../../atomic-deploys--large.webp)

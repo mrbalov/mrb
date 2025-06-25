@@ -1,6 +1,6 @@
 {
   "markdown.marp.themes": [
-    "https://raw.githubusercontent.com/dracula/marp/master/dracula/dracula.css",
+    "./assets/marp/dracula.css",
     "https://raw.githubusercontent.com/noraj/cybertopia-marp/master/themes/cybertopia.css"
   ]
 }
