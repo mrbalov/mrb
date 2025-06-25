@@ -14,6 +14,13 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
+# GLOSSARY
+
+- **CF:** Composable Frontend.
+- **DDD:** Domain-Driven Design. [↗](https://martinfowler.com/bliki/DomainDrivenDesign.html)
+
+---
+
 # TL;DR
 
 - CF enables high flexibility.
