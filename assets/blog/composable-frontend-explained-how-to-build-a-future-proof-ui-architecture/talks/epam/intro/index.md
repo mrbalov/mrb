@@ -6,7 +6,7 @@ class: invert
 
 # COMPOSABLE FRONTEND
 
-![bg right fill brightness:0.8](./cover.png)
+![bg right fill brightness:0.9](./cover.png)
 
 In detail.
 
@@ -38,17 +38,17 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 # MICRO FRONTENDS
 
 - Enable even more flexibility.
-- Adds an additional complexity.
-- Aligns well with DDD. [↗](https://balov.dev/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/#the-power-of-domain-oriented-teams)
-- Allows to mix techs.
+- Add an additional complexity.
+- Align well with DDD. [↗](https://balov.dev/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/#the-power-of-domain-oriented-teams)
+- Allow to mix techs.
 
 ---
 
-![bg fit brightness:0.8](../../../how-micro-frontends-are-glued--large.webp)
+![bg fit brightness:1](../../../how-micro-frontends-are-glued--large.webp)
 
 ---
 
-![bg fit brightness:0.8](../../../how-composable-frontend-bricks-are-glued--large.webp)
+![bg fit brightness:1](../../../how-composable-frontend-bricks-are-glued--large.webp)
 
 ---
 
