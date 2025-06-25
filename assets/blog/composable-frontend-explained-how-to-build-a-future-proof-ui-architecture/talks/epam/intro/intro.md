@@ -28,7 +28,6 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 - Micro Frontends
 - Jamstack
 - Atomic Deploys
-- Atomic Design
 - Headless Software
 - SSR, SSG, ISR
 - MACH
@@ -53,8 +52,14 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-# Jamstack
+# JAMSTACK
 
 - JS, APIs, Markup.
 - Decouples UI from business logic.
 - SSG, Atomic Deploys, Headless.
+
+TODO generate image
+
+# ATOMIC DEPLOYS
+
+- todo
