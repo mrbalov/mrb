@@ -53,11 +53,11 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-![bg fit brightness:1](../../../how-micro-frontends-are-glued--large.webp)
+![bg fit brightness:1](../../how-micro-frontends-are-glued--large.webp)
 
 ---
 
-![bg fit brightness:1](../../../how-composable-frontend-bricks-are-glued--large.webp)
+![bg fit brightness:1](../../how-composable-frontend-bricks-are-glued--large.webp)
 
 ---
 
@@ -83,4 +83,4 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-![bg fit brightness:1](../../../atomic-deploys--large.webp)
+![bg fit brightness:1](../../atomic-deploys--large.webp)
