@@ -6,9 +6,9 @@ class: invert
 
 # COMPOSABLE FRONTEND
 
-![bg right fill brightness:0.8](./cover.png)
+![bg right fill brightness:0.9](./cover.png)
 
-In detail.
+Intro.
 
 According to the [Composable Frontend Explained: How to Build a Future-Proof UI Architecture](https://balov.dev/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/) by [Mr.B](https://balov.dev/).
 
@@ -44,7 +44,7 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 # MICRO FRONTENDS
 
-![bg right fill brightness:0.8](./mf.png)
+![bg right fill brightness:0.9](./mf.png)
 
 - Enable even more flexibility.
 - Add an additional complexity.
@@ -53,17 +53,17 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-![bg fit brightness:1](../../how-micro-frontends-are-glued--large.webp)
+![bg fit brightness:1](./how-micro-frontends-are-glued--large.webp)
 
 ---
 
-![bg fit brightness:1](../../how-composable-frontend-bricks-are-glued--large.webp)
+![bg fit brightness:1](./how-composable-frontend-bricks-are-glued--large.webp)
 
 ---
 
 # JAMSTACK
 
-![bg right fill brightness:0.8](./jamstack.png)
+![bg right fill brightness:0.9](./jamstack.png)
 
 - JS, APIs, Markup.
 - Decouples UI from business logic.
@@ -73,7 +73,7 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 # ATOMIC DEPLOYS [↗](https://balov.dev/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/#atomic-deploys)
 
-![bg right fill brightness:0.8](./atomic-deploys.png)
+![bg right fill brightness:0.9](./atomic-deploys.png)
 
 - Zero-downtime releases.
 - Immutable and self-contained builds.
@@ -83,4 +83,4 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-![bg fit brightness:1](../../atomic-deploys--large.webp)
+![bg fit brightness:1](./atomic-deploys--large.webp)
