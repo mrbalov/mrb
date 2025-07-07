@@ -60,7 +60,7 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-![bg fit brightness:1](./diagram-composable-frontend-bricks-are-glued.webp)
+![bg fit brightness:1](./diagram-how-composable-frontend-bricks-are-glued.webp)
 
 ---
 
