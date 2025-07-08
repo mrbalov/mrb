@@ -2,11 +2,22 @@
 marp: true
 theme: dracula
 class: invert
+style: |
+  img[alt~="diagram"] {
+    display: block;
+    padding-top: 10px;
+  }
 ---
+
+<style scoped>
+  section.diagram img {
+    margin-top: 10px;
+  }
+</style>
 
 # COMPOSABLE FRONTEND
 
-![bg right fill brightness:0.9](./cover.png)
+![bg right fill brightness:0.9](./cover.webp)
 
 Intro.
 
@@ -38,12 +49,12 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 # KEY TOPICS
 
 - Micro Frontends
+- Brick
 - Jamstack
 - Atomic Deploys
 - Headless Software
 - SSR, SSG, ISR
 - MACH Alliance
-- Brick
 
 ---
 
@@ -56,9 +67,21 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
+# BRICK
+
+- It is a conceptual thing.
+- Imagine it as a reusable UI element that is isolated from other functionality.
+- The term is based on the Lego example, that gives you enough flexibility to build literally anything from elements with a universal interface (i.e., bricks).
+
+---
+
+###### HOW MFs ARE GLUED
+
 ![bg fit brightness:1](./diagram-how-micro-frontends-are-glued.webp)
 
 ---
+
+###### HOW CF BRICKS ARE GLUED
 
 ![bg fit brightness:1](./diagram-how-composable-frontend-bricks-are-glued.webp)
 
@@ -91,7 +114,9 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-![bg fit brightness:1](./diagram-headless-cms.webp)
+###### HEADLESS CMS
+
+![bg fit diagram brightness:1](./diagram-headless-cms.webp)
 
 ---
 
@@ -115,14 +140,8 @@ Non-profit (🤨) group of software vendors which promote the following principl
 
 ---
 
-# BRICK
-
-- It is a conceptual thing.
-- Imagine it as a reusable UI element that is isolated from other functionality.
-- The term is based on the Lego example, that gives you enough flexibility to build literally anything from elements with a universal interface (i.e., bricks).
-
----
-
 # THE END!
 
-![bg right fill brightness:0.9](./cover-engineers.png)
+![bg right fill brightness:0.9](./cover-engineers.webp)
+
+Your questions are welcome.
