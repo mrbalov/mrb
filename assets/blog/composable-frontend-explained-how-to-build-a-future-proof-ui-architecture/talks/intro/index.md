@@ -28,6 +28,7 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 # GLOSSARY
 
 - **CF:** Composable Frontend.
+- **MFE:** Micro Frontend.
 - **DDD:** Domain-Driven Design. [↗](https://martinfowler.com/bliki/DomainDrivenDesign.html)
 - **LAMP:** Linux, Apache, MySQL, PHP. [↗](https://www.atlassian.com/blog/bitbucket/lamp-vs-mean-which-stack-is-right-for-you)
 - **SSR:** Server-Side Rendering.
@@ -75,7 +76,7 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-###### HOW MFs ARE GLUED
+###### HOW MFEs ARE GLUED
 
 ![bg fit brightness:1](./diagram-how-micro-frontends-are-glued.webp)
 
