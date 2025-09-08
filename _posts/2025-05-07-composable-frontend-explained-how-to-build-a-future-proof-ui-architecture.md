@@ -410,3 +410,7 @@ The Composable Frontend Architecture is built upon the <abbr title="JavaScript, 
 35. <a href="https://alokai.com/blog/composable-architecture" rel="noopener noreferrer" target="_blank">What is Composable Architecture? - Commercial Article on Alokai</a>
 36. <a href="https://www.netlify.com/blog/how-we-run-nextjs/" rel="noopener noreferrer" target="_blank">How we run Next.js today — and what should change - Article on Netlify</a>
 37. <a href="https://codetv.dev/blog/wtf-is-jamstack" rel="noopener noreferrer" target="_blank">WTF is the <abbr title="JavaScript, APIs, Markup">Jamstack</abbr>? A goofy name for a great web architecture. - Article on Code TV</a>
+
+## Relations
+
+1. <a href="/assets/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/talks/intro/" rel="noopener noreferrer" target="_blank">Presentation: Composable Frontend Intro</a>
