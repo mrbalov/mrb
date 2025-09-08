@@ -91,7 +91,7 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 # JAMSTACK
 
 - JS, APIs, Markup.
-- Decouples UI from business logic.
+- Decouples UI from business logic. [↗](https://daverupert.com/2024/02/ui-states/)
 - SSG, Atomic Deploys, Headless.
 
 ---
