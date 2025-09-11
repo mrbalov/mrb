@@ -25,7 +25,7 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-# GLOSSARY
+# 1. GLOSSARY
 
 - **CF:** Composable Frontend.
 - **MFE:** Micro Frontend.
@@ -38,16 +38,39 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-# TL;DR
+# 2. WHAT IS CF?
 
-- CF enables high flexibility.
-- CF promotes building GUI from building blocks, like Lego.
-- CF is complex and expensive.
-- With DDD, a better flexibility (and even higher complexity) becomes possible.
+And how to benefit from it in practice?
+
+![bg right fill brightness:0.9](./what-is-cf.webp)
 
 ---
 
-# KEY TOPICS
+##### 2.1. BREAK DOWN UI INTO INDEPENDENT PIECES
+
+Instead of building one big FE, you split your UI into smaller, independent components that can be developed, tested, and updated separately.
+
+---
+
+##### 2.2. REUSE & COMBINE
+
+Building blocks can be reused or combined in different ways to create flexible and dynamic user interfaces.
+
+---
+
+##### 2.3. TEAM-FRIENDLY APPROACH
+
+Different teams can work on different parts of the FE (like the header, footer, or search bar) without stepping on each other's toes, speeding up development. Aligns well with DDD and Modular Monolith.
+
+---
+
+##### 2.4. FUTURE-PROOF ARCHITECTURE
+
+Since components are decoupled, it's easier to update, replace, or add new features without reworking the entire FE.
+
+---
+
+# 3. KEY TOPICS
 
 - Micro Frontends
 - Brick
@@ -59,7 +82,7 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-# MICRO FRONTENDS
+# 4. MICRO FRONTENDS
 
 - Enable even more flexibility.
 - Add an additional complexity.
@@ -68,7 +91,7 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-# BRICK
+# 5. BRICK
 
 - It is a conceptual thing.
 - Imagine it as a reusable UI element that is isolated from other functionality.
@@ -76,19 +99,19 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-###### HOW MFEs ARE GLUED
+##### 5.1. HOW MFEs ARE GLUED
 
 ![bg fit brightness:1](./diagram-how-micro-frontends-are-glued.webp)
 
 ---
 
-###### HOW CF BRICKS ARE GLUED
+##### 5.2. HOW CF BRICKS ARE GLUED
 
 ![bg fit brightness:1](./diagram-how-composable-frontend-bricks-are-glued.webp)
 
 ---
 
-# JAMSTACK
+# 6. JAMSTACK
 
 - JS, APIs, Markup.
 - Decouples UI from business logic. [↗](https://daverupert.com/2024/02/ui-states/)
@@ -96,7 +119,7 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-# ATOMIC DEPLOYS [↗](https://balov.dev/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/#atomic-deploys)
+# 7. ATOMIC DEPLOYS [↗](https://balov.dev/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/#atomic-deploys)
 
 - Zero-downtime releases.
 - Immutable and self-contained builds.
@@ -106,7 +129,7 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-# HEADLESS SOFTWARE [↗](https://balov.dev/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/#headless-data-providers)
+# 8. HEADLESS SOFTWARE [↗](https://balov.dev/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/#headless-data-providers)
 
 - No GUI.
 - Only data is important.
@@ -115,13 +138,13 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-###### HEADLESS CMS
+##### 8.1. HEADLESS CMS
 
 ![bg fit diagram brightness:1](./diagram-headless-cms.webp)
 
 ---
 
-# SSR, SSG, ISR [↗](https://balov.dev/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/#static-site-generation)
+# 9. SSR, SSG, ISR [↗](https://balov.dev/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/#static-site-generation)
 
 - **SSR:** The page is generated for every request.
 - **SSG:** The page is generated in advance, during the build time.
@@ -130,7 +153,7 @@ According to the [Composable Frontend Explained: How to Build a Future-Proof UI 
 
 ---
 
-# MACH ALLIANCE [↗](https://en.wikipedia.org/wiki/MACH_Alliance)
+# 10. MACH ALLIANCE [↗](https://en.wikipedia.org/wiki/MACH_Alliance)
 
 Non-profit (🤨) group of software vendors which promote the following principles in the software development:
 
@@ -138,6 +161,16 @@ Non-profit (🤨) group of software vendors which promote the following principl
 - API-First
 - Cloud-Native
 - Headless
+
+---
+
+# Summary
+
+- CF enables high flexibility.
+- CF promotes building GUI from building blocks, like Lego.
+- CF is complex and expensive.
+- With DDD, a better flexibility (and even higher complexity) becomes possible.
+- Read my article for more details! [↗](https://balov.dev/blog/composable-frontend-explained-how-to-build-a-future-proof-ui-architecture/)
 
 ---
 
