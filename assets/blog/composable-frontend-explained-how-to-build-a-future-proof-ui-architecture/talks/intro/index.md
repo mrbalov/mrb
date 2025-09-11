@@ -164,7 +164,7 @@ Non-profit (🤨) group of software vendors which promote the following principl
 
 ---
 
-# Summary
+# SUMMARY
 
 - CF enables high flexibility.
 - CF promotes building GUI from building blocks, like Lego.
