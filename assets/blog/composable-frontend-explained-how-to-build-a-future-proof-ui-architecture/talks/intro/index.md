@@ -176,6 +176,6 @@ Non-profit (🤨) group of software vendors which promote the following principl
 
 # THE END!
 
-![bg right fill brightness:0.9](./cover-engineers.webp)
+![bg right fill brightness:0.9](./engineers.webp)
 
-Your questions are welcome.
+Your questions are welcome. [↗](./questions-1)
