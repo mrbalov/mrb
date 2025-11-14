@@ -6,7 +6,7 @@ timezone: Europe/Kyiv
 og_image: assets/img/ogp-global.webp
 mode: dark
 url: https://balov.dev
-baseurl: https://balov.dev
+baseurl:
 permalink: /:title/
 google_analytics:
 fb_appid:
