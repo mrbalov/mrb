@@ -43,7 +43,21 @@ Each tool offers different approaches to AI-assisted development with varying le
 
 ---
 
-# ABOUT TORQ
+# PET PROJECT IDEA
+
+---
+
+# [ABOUT STRAVA](https://strava.com)
+
+![bg right fit brightness:0.9](./strava.png)
+
+- You train (running, riding, or anything else).
+- The activity becomes public.
+- You get more motivation to train!
+
+---
+
+# [ABOUT TORQ](https://torq.club)
 
 ![bg right fit brightness:0.9](./qr-torq.png)
 
@@ -215,11 +229,9 @@ The easiest way to start with hooks is to use shared ones!
 
 ---
 
-# EXAMPLE: TDD
+# VIBE CODING TIME!
 
-![bg right fill brightness:0.9](./tdd.png)
-
-Test-Driven Development is all about implementing tests before the logic.
+![bg right fill brightness:0.9](./vibe-coding.gif)
 
 ---
 
